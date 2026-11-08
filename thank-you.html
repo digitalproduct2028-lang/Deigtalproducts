@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Thank you for your purchase – DigitalProducts.design</title>
+<meta name="robots" content="noindex">
+<link rel="icon" href="assets/logo-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600;700&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{color-scheme:light;--navy:#0b1f6b;--blue:#1360f0;--green:#18a54a;--orange:#ff6a13;--pink:#ff3d7f;--yellow:#ffd23f;--ink-soft:#4a5578;--sky:#eaf4ff}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;font-family:"Nunito","Segoe UI",system-ui,sans-serif;color:#1d2747;background:linear-gradient(180deg,#bfe2ff 0%,#eaf6ff 60%,#fff 100%);display:flex;flex-direction:column;align-items:center;padding:calc(24px + env(safe-area-inset-top,0px)) 16px calc(24px + env(safe-area-inset-bottom,0px))}
+h1,h2{font-family:"Fredoka","Trebuchet MS",sans-serif;color:var(--navy);margin:0;line-height:1.1}
+.logo{width:200px;margin:8px 0 22px}
+.card{width:min(640px,100%);background:#fff;border-radius:28px;box-shadow:0 24px 60px rgba(11,31,107,.18);padding:40px 32px;text-align:center;position:relative;overflow:hidden}
+.tick{width:96px;height:96px;margin:0 auto 18px;border-radius:50%;background:var(--green);display:grid;place-items:center;box-shadow:0 14px 28px rgba(24,165,74,.35);animation:pop .4s ease}
+.tick svg{width:52px;height:52px;stroke:#fff;fill:none;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
+@keyframes pop{from{transform:scale(.6);opacity:0}to{transform:none;opacity:1}}
+h1{font-size:clamp(30px,5vw,42px)}
+.lead{font-size:18px;font-weight:700;color:var(--ink-soft);margin:12px auto 26px;max-width:460px}
+ol{list-style:none;counter-reset:s;margin:0 0 28px;padding:0;text-align:left;display:grid;gap:12px}
+ol li{counter-increment:s;display:flex;gap:14px;align-items:flex-start;background:var(--sky);border-radius:16px;padding:14px 16px;font-weight:700}
+ol li::before{content:counter(s);flex:none;width:32px;height:32px;border-radius:50%;background:var(--blue);color:#fff;display:grid;place-items:center;font-family:"Fredoka",sans-serif}
+ol li:nth-child(2)::before{background:var(--orange)}
+ol li:nth-child(3)::before{background:var(--pink)}
+.btns{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:14px 22px;border-radius:14px;font-weight:800;font-size:16px;text-decoration:none;color:#fff}
+.btn-blue{background:var(--blue)}
+.btn-green{background:#25d366}
+.btn:hover{filter:brightness(.95)}
+footer{margin-top:26px;color:var(--ink-soft);font-weight:700;font-size:14px;text-align:center}
+:focus-visible{outline:3px solid var(--yellow);outline-offset:3px}
+@media (prefers-reduced-motion:reduce){.tick{animation:none}}
+</style>
+</head>
+<body>
+  <a href="index.html" aria-label="Back to DigitalProducts.design"><img class="logo" src="assets/logo-full.png" alt="DigitalProducts.design – Create, Learn, Plan, Grow"></a>
+  <main class="card">
+    <div class="tick" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg></div>
+    <h1>Thank you for your purchase!</h1>
+    <p class="lead">Your payment was successful. Your worksheets are ready to download.</p>
+    <ol>
+      <li>Open the email from SuperProfile. It has your download link.</li>
+      <li>Download the PDF and save it on your phone or computer.</li>
+      <li>Print the pages you need, as many times as you like.</li>
+    </ol>
+    <p class="lead" style="font-size:16px;margin-top:0">No email after 30 minutes? Check Spam and Promotions, then message us and we’ll resend it.</p>
+    <div class="btns">
+      <a class="btn btn-blue" href="index.html#products">Shop more worksheets</a>
+      <!-- PASTE your WhatsApp number after wa.me/ (country code + number, no +) -->
+      <a class="btn btn-green" href="https://wa.me/919493778649?text=Hi!%20I%20need%20help%20with%20my%20order." target="_blank" rel="noopener">WhatsApp +91 9493778649</a>
+    </div>
+  </main>
+  <footer>© 2026 DigitalProducts.design · Create • Learn • Plan • Grow</footer>
+</body>
+</html>

@@ -1,0 +1,1795 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<!-- ====== SEO: edit title / description if you like ====== -->
+<title>DigitalProducts.design – Printable Kids’ Worksheets & E-books</title>
+<meta name="description" content="Fun, screen-free printable worksheets for kids: brain workout, ADHD focus, coloring, English, maths and puzzles. Instant PDF download. Get a free sample.">
+<meta name="theme-color" content="#0b1f6b">
+<!-- Open Graph (shows when the link is shared on WhatsApp / Facebook) -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="DigitalProducts.design – Printable Kids’ Worksheets">
+<meta property="og:description" content="Screen-free learning for a brighter tomorrow. Instant PDF download.">
+<meta property="og:image" content="assets/hero-kids-brain-workout.jpg"><!-- PASTE full URL after upload, e.g. https://digitalproducts.design/assets/hero-kids-brain-workout.jpg -->
+<meta property="og:url" content="https://digitalproducts.design/">
+<link rel="icon" href="assets/logo-icon.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<!-- Country-code phone field (flags + validation) -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@18.2.1/build/css/intlTelInput.css">
+
+<style>
+/* =========================================================
+   DESIGN TOKENS
+   ========================================================= */
+:root{
+  color-scheme: light;
+  --navy:#0b1f6b;
+  --navy-2:#06164f;
+  --blue:#1360f0;
+  --blue-dark:#0c49c2;
+  --pink:#ff3d7f;
+  --yellow:#ffd23f;
+  --green:#18a54a;
+  --orange:#ff6a13;
+  --purple:#a03bd6;
+  --sky:#eaf4ff;
+  --sky-2:#d6eaff;
+  --ink:#1d2747;
+  --ink-soft:#4a5578;
+  --line:#dfe7f5;
+  --white:#fff;
+  --radius-lg:28px;
+  --radius:18px;
+  --radius-sm:12px;
+  --shadow:0 10px 30px rgba(19,52,140,.10);
+  --shadow-lg:0 24px 60px rgba(11,31,107,.22);
+  --font-head:"Fredoka","Baloo 2","Trebuchet MS",system-ui,sans-serif;
+  --font-body:"Nunito","Poppins","Segoe UI",system-ui,-apple-system,sans-serif;
+  --header-h:72px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(var(--header-h) + 12px)}
+body{margin:0;font-family:var(--font-body);font-size:16px;line-height:1.6;color:var(--ink);background:#fff;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:var(--blue)}
+button{font:inherit;cursor:pointer}
+h1,h2,h3,h4{font-family:var(--font-head);color:var(--navy);line-height:1.1;margin:0}
+.wrap{width:min(1240px,100% - 32px);margin-inline:auto}
+[hidden]{display:none!important}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+:focus-visible{outline:3px solid var(--yellow);outline-offset:3px;border-radius:8px}
+.icon{width:20px;height:20px;flex:none;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+
+/* =========================================================
+   BUTTONS
+   ========================================================= */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border:0;border-radius:14px;padding:14px 22px;font-weight:800;font-size:16px;text-decoration:none;color:#fff;line-height:1.15;transition:transform .15s ease,box-shadow .15s ease,background .15s ease}
+.btn:hover{transform:translateY(-2px)}
+.btn:active{transform:translateY(0)}
+.btn-blue{background:var(--blue);box-shadow:0 8px 18px rgba(19,96,240,.30)}
+.btn-blue:hover{background:var(--blue-dark)}
+.btn-green{background:var(--green);box-shadow:0 8px 18px rgba(24,165,74,.28)}
+.btn-green:hover{background:#12873c}
+.btn-orange{background:var(--orange);box-shadow:0 8px 18px rgba(255,106,19,.30)}
+.btn-orange:hover{background:#e65a08}
+.btn-white{background:#fff;color:var(--navy);box-shadow:0 8px 18px rgba(11,31,107,.12)}
+.btn-ghost{background:transparent;color:var(--navy);border:2px solid var(--navy)}
+.btn small{display:block;font-weight:700;font-size:12px;opacity:.9}
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+.site-header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.96);backdrop-filter:blur(10px);border-bottom:1px solid #eef2fa;padding-top:env(safe-area-inset-top,0px)}
+.header-inner{height:var(--header-h);display:flex;align-items:center;gap:24px}
+.brand{min-width:0;display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--navy);font-family:var(--font-head);font-weight:700;font-size:22px;letter-spacing:-.2px;white-space:nowrap}
+.brand img{height:46px;width:auto}
+.main-nav{margin-left:auto;display:flex;gap:6px}
+.main-nav a{color:var(--ink-soft);text-decoration:none;font-weight:700;padding:10px 14px;border-radius:10px;position:relative}
+.main-nav a:hover{color:var(--blue);background:var(--sky)}
+.main-nav a.active{color:var(--blue)}
+.main-nav a.active::after{content:"";position:absolute;left:14px;right:14px;bottom:2px;height:3px;border-radius:3px;background:var(--blue)}
+.header-actions{display:flex;align-items:center;gap:6px}
+.icon-btn{width:44px;height:44px;border-radius:12px;border:0;background:transparent;color:var(--navy);display:grid;place-items:center;text-decoration:none}
+.icon-btn:hover{background:var(--sky)}
+.icon-btn .icon{width:22px;height:22px}
+.icon-btn.wa{color:#fff;background:#25d366}
+.icon-btn.wa:hover{background:#1ebe5a}
+.wa-pill{width:auto;padding:0 16px 0 12px;gap:8px;display:inline-flex;align-items:center;font-weight:800;font-size:15px;white-space:nowrap}
+@media (max-width:1260px){.wa-pill .wa-num{display:none}.wa-pill{width:44px;padding:0;justify-content:center}}
+.menu-btn{display:none}
+.mobile-nav{position:fixed;inset:0;z-index:60;pointer-events:none}
+.mobile-nav .scrim{position:absolute;inset:0;background:rgba(6,22,79,.45);opacity:0;transition:opacity .25s}
+.mobile-nav .panel{position:absolute;top:0;right:0;bottom:0;width:min(320px,85vw);background:#fff;padding:calc(20px + env(safe-area-inset-top,0px)) 20px 20px;transform:translateX(100%);transition:transform .3s ease;display:flex;flex-direction:column;gap:6px}
+.mobile-nav.open{pointer-events:auto}
+.mobile-nav.open .scrim{opacity:1}
+.mobile-nav.open .panel{transform:none}
+.mobile-nav .panel a{font-family:var(--font-head);font-size:22px;font-weight:600;color:var(--navy);text-decoration:none;padding:12px 10px;border-radius:12px}
+.mobile-nav .panel a:hover{background:var(--sky)}
+.mobile-nav .panel .close-row{display:flex;justify-content:flex-end;margin-bottom:8px}
+
+/* =========================================================
+   HERO SLIDESHOW
+   ========================================================= */
+.hero{position:relative;overflow:hidden;background:
+   radial-gradient(60% 50% at 15% 10%,#ffffff 0%,rgba(255,255,255,0) 60%),
+   linear-gradient(180deg,#bfe2ff 0%,#dff0ff 55%,#eef8ff 100%)}
+.hero::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:70px;background:
+  url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 70' preserveAspectRatio='none'%3E%3Cpath d='M0 40 C240 10 420 60 720 38 C1000 18 1200 55 1440 30 L1440 70 L0 70Z' fill='%2391cf5a'/%3E%3Cpath d='M0 52 C300 30 520 70 820 52 C1080 36 1260 66 1440 48 L1440 70 L0 70Z' fill='%23ffffff'/%3E%3C/svg%3E") bottom/100% 100% no-repeat;z-index:2;pointer-events:none}
+.cloud{position:absolute;background:#fff;border-radius:999px;opacity:.85;z-index:0}
+.cloud::before,.cloud::after{content:"";position:absolute;background:#fff;border-radius:50%}
+.cloud.c1{width:160px;height:44px;top:60px;left:4%}
+.cloud.c1::before{width:70px;height:70px;top:-34px;left:24px}
+.cloud.c1::after{width:52px;height:52px;top:-22px;left:82px}
+.cloud.c2{width:200px;height:50px;top:30px;left:46%;opacity:.7}
+.cloud.c2::before{width:80px;height:80px;top:-40px;left:40px}
+.cloud.c2::after{width:60px;height:60px;top:-26px;left:110px}
+.slides{position:relative;z-index:1}
+.slide{display:none;min-height:540px}
+.slide.is-active{display:block;animation:slideIn .6s ease}
+@keyframes slideIn{from{opacity:0;transform:translateX(24px)}to{opacity:1;transform:none}}
+.slide-inner{display:grid;grid-template-columns:1fr 1.05fr;align-items:center;gap:24px;padding:48px 0 90px}
+.slide-text{text-align:center;max-width:560px;justify-self:center}
+.slide-title{font-size:clamp(46px,6.4vw,84px);font-weight:700;letter-spacing:-1px;line-height:.98;color:var(--navy);text-shadow:0 3px 0 #fff,0 6px 18px rgba(11,31,107,.15)}
+.slide-title .t-pink{color:var(--pink)}
+.slide-title .t-green{color:var(--green)}
+.slide-title .t-orange{color:var(--orange)}
+.slide-title .t-purple{color:var(--purple)}
+.slide-title .t-blue{color:var(--blue)}
+.slide-label{display:inline-block;margin-top:16px;background:var(--yellow);color:var(--navy);font-family:var(--font-head);font-weight:700;font-size:clamp(22px,2.6vw,32px);padding:6px 26px;border-radius:999px;transform:rotate(-1.5deg);box-shadow:0 6px 0 rgba(11,31,107,.12)}
+.slide-desc{margin:20px auto 0;font-size:clamp(16px,1.4vw,18px);font-weight:700;color:var(--navy);max-width:500px}
+.slide-cta{margin-top:26px;display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
+.slide-art{position:relative;align-self:end;justify-self:end;width:100%;max-width:640px}
+.slide-art .art-img{width:100%;height:auto;border-radius:24px;-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 9%,#000 100%);mask-image:linear-gradient(90deg,transparent 0,#000 9%,#000 100%)}
+.cloud-badge{position:absolute;top:4%;right:0;width:220px;padding:28px 16px;text-align:center;font-family:var(--font-head);font-weight:700;font-size:19px;line-height:1.15;color:var(--blue);background:#fff;border-radius:50% 50% 46% 54%/55% 50% 50% 45%;box-shadow:0 12px 30px rgba(11,31,107,.15)}
+.cloud-badge span{color:var(--pink)}
+/* placeholder art for slides 2–4 (replace with your own image later) */
+.art-stage{position:relative;aspect-ratio:1.48;display:grid;place-items:center}
+.art-stage .sheet{position:absolute;width:38%;aspect-ratio:.77;background:#fff;border-radius:10px;box-shadow:0 10px 24px rgba(11,31,107,.14);padding:12px}
+.art-stage .sheet::before{content:"";display:block;height:8px;width:60%;background:#cfd8ea;border-radius:4px;margin-bottom:10px}
+.art-stage .sheet::after{content:"";display:block;height:70%;background:repeating-linear-gradient(0deg,#eef2fa 0 8px,transparent 8px 22px);border-radius:6px}
+.art-stage .sheet.s1{left:6%;top:16%;transform:rotate(-9deg)}
+.art-stage .sheet.s2{right:6%;top:14%;transform:rotate(8deg)}
+.art-stage .book{position:relative;width:44%;z-index:1}
+.art-emoji{position:absolute;font-size:44px;filter:drop-shadow(0 6px 8px rgba(0,0,0,.12))}
+.slider-arrow{position:absolute;top:50%;transform:translateY(-50%);z-index:3;width:48px;height:48px;border-radius:50%;border:0;background:#fff;color:var(--navy);display:grid;place-items:center;box-shadow:var(--shadow)}
+.slider-arrow:hover{background:var(--navy);color:#fff}
+.slider-arrow.prev{left:16px}
+.slider-arrow.next{right:16px}
+.slider-dots{position:absolute;left:0;right:0;bottom:78px;z-index:3;display:flex;gap:10px;justify-content:center}
+.slider-dots button{width:12px;height:12px;border-radius:999px;border:0;background:rgba(11,31,107,.25);padding:0;transition:width .25s,background .25s}
+.slider-dots button[aria-selected="true"]{width:34px;background:var(--blue)}
+
+/* =========================================================
+   BOOK COVER PLACEHOLDER (used when a product has no image yet)
+   ========================================================= */
+.ph-cover{position:relative;aspect-ratio:.78;border-radius:10px 14px 14px 10px;padding:14% 9% 10%;text-align:center;color:#fff;overflow:hidden;box-shadow:0 14px 30px rgba(11,31,107,.25),inset 6px 0 0 rgba(0,0,0,.08);background:var(--c,#1360f0);display:flex;flex-direction:column;align-items:center;gap:8%}
+.ph-cover::before{content:"";position:absolute;inset:auto -20% -30% -20%;height:55%;background:radial-gradient(closest-side,rgba(255,255,255,.35),transparent);}
+.ph-cover .ph-title{font-family:var(--font-head);font-weight:700;font-size:var(--fs,22px);line-height:1;text-shadow:0 2px 0 rgba(0,0,0,.18)}
+.ph-cover .ph-ribbon{background:var(--yellow);color:var(--navy);font-family:var(--font-head);font-weight:700;font-size:calc(var(--fs,22px) * .48);padding:4px 10px;border-radius:999px;white-space:nowrap}
+.ph-cover .ph-emoji{font-size:calc(var(--fs,22px) * 2.4);line-height:1;margin-top:auto;filter:drop-shadow(0 6px 6px rgba(0,0,0,.2))}
+.ph-cover .ph-brand{font-size:calc(var(--fs,22px) * .36);font-weight:800;opacity:.85}
+
+/* =========================================================
+   FEATURES
+   ========================================================= */
+.features{position:relative;padding:0 0 64px}
+.benefits{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;background:#fff;border-radius:var(--radius-lg);padding:22px;box-shadow:var(--shadow);border:1px solid #eef2fa}
+.benefit{text-align:center;padding:8px 4px}
+.benefit .b-ico{width:64px;height:64px;margin:0 auto 10px;border-radius:50%;display:grid;place-items:center;font-size:32px;background:var(--bg)}
+.benefit h3{font-size:18px;font-weight:600;line-height:1.2}
+.benefit p{margin:4px 0 0;font-size:14px;color:var(--ink-soft)}
+.trust{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:16px}
+.trust-item{display:flex;align-items:center;gap:12px;background:var(--sky);border-radius:var(--radius);padding:14px 16px;font-weight:800;color:var(--navy)}
+.trust-item .t-ico{width:40px;height:40px;border-radius:12px;display:grid;place-items:center;background:#fff;color:var(--blue);flex:none}
+
+/* =========================================================
+   PRODUCTS
+   ========================================================= */
+.section{padding:64px 0}
+.section-head{display:flex;flex-wrap:wrap;align-items:end;justify-content:space-between;gap:16px;margin-bottom:24px}
+.section-title{font-size:clamp(28px,3.4vw,40px);font-weight:700}
+.section-sub{margin:6px 0 0;color:var(--ink-soft);font-weight:600}
+.shop{display:grid;grid-template-columns:280px 1fr;gap:28px;align-items:start}
+.cat-box{position:sticky;top:calc(var(--header-h) + 16px);background:#fff;border-radius:var(--radius);box-shadow:var(--shadow);border:1px solid #eef2fa;overflow:hidden}
+.cat-box h2{background:var(--navy);color:#fff;font-size:20px;font-weight:600;padding:16px 20px}
+.cat-list{list-style:none;margin:0;padding:10px}
+.cat-btn{width:100%;display:flex;align-items:center;gap:12px;border:0;background:transparent;text-align:left;padding:11px 12px;border-radius:12px;font-weight:700;color:var(--navy);font-size:16px}
+.cat-btn:hover{background:var(--sky)}
+.cat-btn[aria-pressed="true"]{background:#e2eeff;color:var(--blue)}
+.cat-btn .c-ico{width:30px;font-size:20px;text-align:center}
+.cat-btn .count{margin-left:auto;font-size:12px;font-weight:800;background:#eef2fa;color:var(--ink-soft);border-radius:999px;padding:2px 9px}
+.cat-btn[aria-pressed="true"] .count{background:var(--blue);color:#fff}
+.search{position:relative;min-width:min(320px,100%)}
+.search input{width:100%;border:2px solid var(--line);border-radius:999px;padding:12px 18px 12px 46px;font:inherit;font-weight:600;color:var(--ink);background:#fff}
+.search input:focus{outline:none;border-color:var(--blue)}
+.search .icon{position:absolute;left:16px;top:50%;transform:translateY(-50%);color:var(--ink-soft)}
+.product-list{display:grid;gap:22px}
+.card{display:grid;grid-template-columns:minmax(220px,40%) 1fr;background:#fff;border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow);border:1px solid #eef2fa;animation:cardIn .4s ease both}
+@keyframes cardIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.card-media{position:relative;overflow:hidden;background:linear-gradient(160deg,#e6f2ff,#d3e8ff);display:grid;place-items:center;padding:22px;min-height:280px}
+.card-media img{width:100%;height:100%;max-height:330px;object-fit:contain}
+.card-media .ph-wrap{position:relative;width:min(220px,70%)}
+.card-media .ph-wrap .sheet{position:absolute;inset:4% -18% 4% 18%;background:#fff;border-radius:8px;transform:rotate(7deg);box-shadow:0 8px 18px rgba(11,31,107,.12)}
+.card-media .ph-wrap .sheet.l{inset:6% 22% 2% -22%;transform:rotate(-8deg)}
+.card-media .ph-wrap .ph-cover{position:relative}
+.badge{position:absolute;top:16px;left:16px;z-index:2;background:var(--pink);color:#fff;font-weight:800;font-size:13px;padding:5px 12px;border-radius:999px;box-shadow:0 6px 14px rgba(255,61,127,.3)}
+.badge.new{background:var(--green);box-shadow:0 6px 14px rgba(24,165,74,.3)}
+.card-body{padding:24px 26px;display:flex;flex-direction:column;gap:12px}
+.chip{align-self:flex-start;font-size:12px;font-weight:800;color:var(--blue);background:#e8f0ff;border-radius:8px;padding:4px 10px}
+.card-title{font-size:clamp(24px,2.4vw,30px);font-weight:700;line-height:1.05}
+.card-title span{display:block;color:var(--blue)}
+.card-desc{margin:0;color:var(--ink-soft);font-weight:600}
+.tags{display:flex;flex-wrap:wrap;gap:8px}
+.tag{font-size:13px;font-weight:800;color:var(--navy);background:var(--sky);border-radius:999px;padding:5px 12px}
+.price{display:flex;align-items:baseline;gap:10px;font-family:var(--font-head)}
+.price .now{font-size:30px;font-weight:700;color:var(--navy)}
+.price .from{font-family:var(--font-body);font-size:14px;font-weight:700;color:var(--ink-soft)}
+.price .was{font-size:18px;color:#8a93ad;text-decoration:line-through}
+.price .save{font-family:var(--font-body);font-size:13px;font-weight:800;color:var(--green);background:#e5f7eb;border-radius:999px;padding:3px 10px}
+.card-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:auto}
+.card-actions .btn{flex:1 1 150px;padding:12px 14px;font-size:15px;justify-content:flex-start;text-align:left}
+.card-actions .btn .icon{width:26px;height:26px}
+.free-now{color:var(--green)!important;letter-spacing:1px}
+.free-card .card-media{background:linear-gradient(160deg,#e6f9ec,#cdeedd)}
+.free-card{grid-template-columns:1.25fr 1fr}
+.free-card .card-media{padding:18px 18px 34px}
+.free-card .scenes{height:auto;aspect-ratio:1376/768}
+@media (max-width:1100px){.free-card{grid-template-columns:1fr}}
+.card.bundle{border:3px solid var(--yellow);background:linear-gradient(135deg,#fffbe8,#fff)}
+.card.bundle .card-media{background:linear-gradient(160deg,#fff3c4,#ffe38a)}
+.ribbon{position:absolute;top:18px;right:-44px;transform:rotate(35deg);background:var(--pink);color:#fff;font-weight:800;font-size:14px;padding:6px 52px;z-index:2}
+.empty{text-align:center;padding:48px 20px;background:var(--sky);border-radius:var(--radius-lg)}
+.empty .e-ico{font-size:52px}
+.empty h3{font-size:26px;margin:8px 0}
+.empty p{margin:0 0 18px;color:var(--ink-soft);font-weight:600}
+
+
+/* 3-scene product pictures */
+.scenes{position:relative;width:100%;height:300px}
+.scene{position:absolute;inset:0;display:grid;place-items:center;opacity:0;transform:scale(1.05);transition:opacity .55s ease,transform 1s ease}
+.scene.on{opacity:1;transform:none}
+.scene img{width:100%;height:100%;object-fit:contain;border-radius:14px}
+.scene .ph-wrap{width:min(200px,62%)}
+.scene-dots{position:absolute;left:0;right:0;bottom:12px;display:flex;justify-content:center;gap:6px;z-index:2}
+.scene-dots i{width:8px;height:8px;border-radius:999px;background:rgba(11,31,107,.22);transition:width .3s,background .3s}
+.scene-dots i.on{width:22px;background:var(--blue)}
+.scene-page{width:min(210px,64%);aspect-ratio:.77;background:#fff;border-radius:10px;box-shadow:0 14px 30px rgba(11,31,107,.18);padding:14px;display:flex;flex-direction:column;gap:10px;transform:rotate(-3deg)}
+.sp-top{background:var(--c);color:#fff;font-family:var(--font-head);font-weight:600;font-size:15px;border-radius:8px;padding:6px 10px}
+.sp-row{border:2px dashed #cfdaf0;border-radius:8px;padding:8px;text-align:center;font-weight:800;color:var(--navy);font-size:15px;white-space:nowrap;overflow:hidden}
+.sp-foot{margin-top:auto;font-size:10px;font-weight:800;color:#9aa6c4;text-align:center}
+.scene-inside{text-align:center;display:grid;justify-items:center;gap:6px}
+.si-stack{position:relative;width:130px;height:150px;margin-bottom:10px}
+.si-stack span{position:absolute;inset:0;background:#fff;border-radius:10px;box-shadow:0 10px 22px rgba(11,31,107,.16);border-top:14px solid var(--c)}
+.si-stack span:nth-child(1){transform:rotate(-12deg) translate(-18px,6px)}
+.si-stack span:nth-child(2){transform:rotate(9deg) translate(16px,4px)}
+.scene-inside strong{font-family:var(--font-head);font-size:28px;color:var(--navy);line-height:1}
+.scene-inside em{font-style:normal;font-weight:800;font-size:14px;color:var(--ink-soft)}
+@media (max-width:720px){.scenes{height:260px}}
+
+/* =========================================================
+   PREVIEW GALLERY
+   ========================================================= */
+.bg-sky{background:var(--sky)}
+.gallery{display:grid;grid-template-columns:repeat(6,1fr);gap:16px}
+.g-item{border:0;padding:0;background:#fff;border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden;text-align:left;transition:transform .2s}
+.g-item:hover{transform:translateY(-4px) rotate(-1deg)}
+.g-thumb{aspect-ratio:.77;background:#fff;padding:12px;border-bottom:1px solid #eef2fa}
+.g-thumb img{width:100%;height:100%;object-fit:cover;border-radius:8px}
+.g-cap{display:block;padding:10px 12px;font-weight:800;color:var(--navy);font-size:14px}
+.ws{height:100%;border:2px dashed #c9d6ee;border-radius:10px;padding:10px;display:flex;flex-direction:column;gap:8px}
+.ws .ws-h{font-family:var(--font-head);font-weight:600;color:var(--navy);font-size:14px}
+.ws .ws-row{display:flex;gap:6px;justify-content:space-around;font-size:20px;color:#9fb0cf}
+
+/* =========================================================
+   HOW IT WORKS
+   ========================================================= */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;counter-reset:s;list-style:none;margin:0;padding:0}
+.step{position:relative;background:#fff;border-radius:var(--radius-lg);padding:28px 22px 24px;box-shadow:var(--shadow);border:1px solid #eef2fa}
+.step::before{counter-increment:s;content:counter(s);position:absolute;top:-18px;left:22px;width:40px;height:40px;border-radius:50%;background:var(--c);color:#fff;font-family:var(--font-head);font-weight:700;font-size:20px;display:grid;place-items:center;box-shadow:0 6px 14px rgba(0,0,0,.15)}
+.step .s-ico{font-size:40px}
+.step h3{font-size:22px;margin:10px 0 6px;font-weight:600}
+.step p{margin:0;color:var(--ink-soft);font-weight:600}
+
+/* =========================================================
+   TESTIMONIALS
+   ========================================================= */
+.quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.quote{background:#fff;border-radius:var(--radius-lg);padding:26px;box-shadow:var(--shadow);border:1px solid #eef2fa;margin:0;display:flex;flex-direction:column;gap:14px}
+.stars{color:#f5b400;font-size:20px;letter-spacing:2px}
+.quote blockquote{margin:0;font-size:17px;font-weight:600;color:var(--ink)}
+.quote figcaption{display:flex;align-items:center;gap:12px;margin-top:auto}
+.avatar{width:46px;height:46px;border-radius:50%;display:grid;place-items:center;color:#fff;font-family:var(--font-head);font-weight:700;font-size:20px;background:var(--c)}
+.quote strong{display:block;color:var(--navy)}
+.quote small{color:var(--ink-soft);font-weight:700}
+
+/* =========================================================
+   FAQ
+   ========================================================= */
+.faq-wrap{display:grid;grid-template-columns:1fr 1.6fr;gap:40px;align-items:start}
+.faq details{background:#fff;border-radius:var(--radius);border:1px solid var(--line);margin-bottom:12px;overflow:hidden}
+.faq summary{list-style:none;cursor:pointer;padding:18px 20px;font-weight:800;font-size:17px;color:var(--navy);display:flex;align-items:center;gap:12px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary .icon{margin-left:auto;transition:transform .2s;color:var(--blue)}
+.faq details[open] summary .icon{transform:rotate(180deg)}
+.faq details[open] summary{color:var(--blue)}
+.faq .ans{padding:0 20px 18px;color:var(--ink-soft);font-weight:600}
+.faq .ans p{margin:0}
+
+/* =========================================================
+   CONTACT
+   ========================================================= */
+.contact-grid{display:grid;grid-template-columns:1fr 1.3fr;gap:28px}
+.contact-cards{display:grid;gap:14px;align-content:start}
+.c-card{display:flex;gap:14px;align-items:center;background:#fff;border-radius:var(--radius);padding:18px;box-shadow:var(--shadow);text-decoration:none;color:var(--ink)}
+.c-card .c-ico{width:52px;height:52px;border-radius:14px;display:grid;place-items:center;color:#fff;background:var(--c);flex:none}
+.c-card strong{display:block;color:var(--navy);font-size:17px}
+.c-card span{color:var(--ink-soft);font-weight:700;word-break:break-word}
+.form{background:#fff;border-radius:var(--radius-lg);padding:26px;box-shadow:var(--shadow);display:grid;gap:14px}
+.form label{font-weight:800;color:var(--navy);font-size:15px;display:grid;gap:6px}
+.field{width:100%;border:2px solid var(--line);border-radius:14px;padding:13px 16px;font:inherit;font-weight:600;color:var(--ink);background:#fff}
+.field:focus{outline:none;border-color:var(--blue);box-shadow:0 0 0 4px rgba(19,96,240,.12)}
+textarea.field{min-height:120px;resize:vertical}
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+.site-footer{position:relative;background:linear-gradient(180deg,#eef6ff,#e3efff);margin-top:40px}
+.site-footer::before{content:"";position:absolute;left:0;right:0;top:-48px;height:50px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 50' preserveAspectRatio='none'%3E%3Cpath d='M0 30 C300 0 520 50 820 26 C1080 6 1260 40 1440 20 L1440 50 L0 50Z' fill='%23eef6ff'/%3E%3C/svg%3E") bottom/100% 100% no-repeat}
+.footer-top{display:grid;grid-template-columns:1.3fr repeat(4,1fr);gap:28px;padding:30px 0 70px}
+.footer-brand img{width:220px;max-width:100%}
+.footer-brand p{margin:12px 0 0;color:var(--ink-soft);font-weight:600;max-width:260px}
+.f-col h3{font-size:18px;margin-bottom:12px;font-weight:600}
+.f-col ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.f-col a,.f-col button{color:var(--ink-soft);text-decoration:none;font-weight:700;background:none;border:0;padding:0;font-size:15px;text-align:left}
+.f-col a:hover,.f-col button:hover{color:var(--blue)}
+.social a{display:flex;align-items:center;gap:10px}
+.social .s-ico{width:28px;height:28px;border-radius:8px;display:grid;place-items:center;color:#fff;background:var(--c);font-weight:800;font-size:14px}
+.social .s-ico .icon{width:16px;height:16px}
+.footer-bottom{position:relative;background:var(--navy-2);color:#cdd7f7;padding:44px 0 calc(28px + env(safe-area-inset-bottom,0px))}
+.footer-bottom::before{content:"";position:absolute;left:0;right:0;top:-40px;height:42px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 42' preserveAspectRatio='none'%3E%3Cpath d='M0 26 C360 -4 720 46 1080 18 C1240 6 1360 14 1440 22 L1440 42 L0 42Z' fill='%2306164f'/%3E%3C/svg%3E") bottom/100% 100% no-repeat}
+.footer-bottom .wrap{display:flex;flex-wrap:wrap;gap:20px;justify-content:space-between;font-size:14px}
+.footer-bottom p{margin:0;max-width:760px}
+.footer-bottom strong{color:#fff}
+
+/* =========================================================
+   FLOATING WHATSAPP + TOAST
+   ========================================================= */
+.wa-float{position:fixed;right:18px;bottom:calc(18px + env(safe-area-inset-bottom,0px));z-index:40;width:60px;height:60px;border-radius:50%;background:#25d366;color:#fff;display:grid;place-items:center;box-shadow:0 12px 26px rgba(37,211,102,.45);text-decoration:none;transition:transform .2s}
+.wa-float:hover{transform:scale(1.07)}
+.wa-float .icon{width:30px;height:30px}
+.toast{position:fixed;left:50%;bottom:calc(24px + env(safe-area-inset-bottom,0px));transform:translate(-50%,calc(100% + 60px));visibility:hidden;z-index:3000;background:var(--navy);color:#fff;font-weight:700;padding:14px 22px;border-radius:14px;box-shadow:var(--shadow-lg);transition:transform .3s;width:max-content;max-width:calc(100vw - 32px);text-align:center}
+.toast.show{transform:translate(-50%,0);visibility:visible}
+
+/* =========================================================
+   MODALS (sample popup, policies, lightbox)
+   ========================================================= */
+.modal{position:fixed;inset:0;z-index:1000;display:none;align-items:center;justify-content:center;padding:20px}
+.modal.open{display:flex}
+.modal-scrim{position:absolute;inset:0;background:rgba(6,22,79,.55);backdrop-filter:blur(3px);animation:fade .2s ease}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+.modal-box{position:relative;background:#fff;border-radius:var(--radius-lg);box-shadow:var(--shadow-lg);width:min(1040px,100%);max-height:calc(100dvh - 40px);overflow:auto;animation:pop .25s ease}
+@keyframes pop{from{opacity:0;transform:translateY(16px) scale(.98)}to{opacity:1;transform:none}}
+.modal-close{position:absolute;top:16px;right:16px;z-index:2;width:44px;height:44px;border-radius:50%;border:2px solid var(--line);background:#fff;color:var(--navy);display:grid;place-items:center}
+.modal-close:hover{background:var(--navy);color:#fff;border-color:var(--navy)}
+.sample-box{display:grid;grid-template-columns:1fr 1fr;overflow:hidden}
+.sample-art{background:linear-gradient(180deg,#d9ecff,#eef7ff);display:grid;place-items:center;padding:24px;min-height:100%}
+.sample-art img{width:100%;max-width:440px;border-radius:20px}
+.sample-art .ph-wrap{width:min(260px,70%)}
+.sample-form{padding:44px 40px 30px;display:flex;flex-direction:column;justify-content:center;gap:14px}
+.pill{align-self:flex-start;background:#e3ebff;color:var(--blue);font-weight:800;font-size:15px;padding:6px 14px;border-radius:10px}
+.sample-form h2{font-size:clamp(30px,3.2vw,42px);font-weight:700;line-height:1.02}
+.sample-form h2 span{display:block;color:var(--blue)}
+.sample-form .lead{margin:0;color:var(--ink-soft);font-weight:600;font-size:17px}
+.sample-form .lead strong{color:var(--navy)}
+.tabs{display:grid;grid-template-columns:1fr 1fr;background:var(--sky);border-radius:14px;padding:5px;gap:5px}
+.tab{white-space:nowrap;border:0;background:transparent;border-radius:10px;padding:11px 8px;font-weight:800;color:var(--ink-soft);display:flex;gap:8px;align-items:center;justify-content:center}
+.tab[aria-selected="true"]{background:#fff;color:var(--blue);box-shadow:0 4px 12px rgba(11,31,107,.10)}
+.input-ico{position:relative}
+.input-ico > .icon{position:absolute;left:16px;top:50%;transform:translateY(-50%);color:var(--ink-soft);width:22px;height:22px;pointer-events:none}
+.input-ico .field{padding-left:52px;font-size:17px}
+.field.invalid{border-color:#e5354b;box-shadow:0 0 0 4px rgba(229,53,75,.12)}
+.iti{width:100%}
+.iti .field{padding-left:96px}
+.iti--container{z-index:2000}
+.note{display:flex;gap:10px;align-items:flex-start;border-radius:12px;padding:12px 14px;font-weight:700;font-size:15px}
+.note .icon{margin-top:2px}
+.note.hint{background:#eef4ff;color:#33508f}
+.note.error{background:#ffeef0;color:#c01f36;border:1px solid #ffd0d6}
+.check{display:flex;gap:10px;align-items:flex-start;font-weight:600;color:var(--ink-soft);font-size:15px;cursor:pointer}
+.check input{width:20px;height:20px;margin-top:2px;accent-color:var(--blue);flex:none}
+.btn-submit{width:100%;padding:17px;font-size:19px;border-radius:14px}
+.btn-submit[disabled]{opacity:.75;cursor:wait;transform:none}
+.spinner{width:20px;height:20px;border:3px solid rgba(255,255,255,.45);border-top-color:#fff;border-radius:50%;animation:spin .8s linear infinite;display:none}
+.loading .spinner{display:inline-block}
+.loading .btn-ico{display:none}
+@keyframes spin{to{transform:rotate(360deg)}}
+.privacy{display:flex;gap:10px;color:var(--ink-soft);font-size:14px;font-weight:600;margin:0}
+.privacy .icon{color:var(--navy);margin-top:2px}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
+.success{display:none;text-align:center;padding:20px 0;flex-direction:column;align-items:center;gap:12px}
+.success.show{display:flex}
+.success .tick{width:84px;height:84px;border-radius:50%;background:var(--green);color:#fff;display:grid;place-items:center;animation:pop .35s ease;box-shadow:0 12px 24px rgba(24,165,74,.35)}
+.success .tick .icon{width:44px;height:44px;stroke-width:3}
+.success h3{font-size:30px}
+.success p{margin:0;color:var(--ink-soft);font-weight:600;max-width:380px}
+.policy-box{width:min(760px,100%);padding:40px 36px 32px}
+.policy-box h2{font-size:32px;margin-bottom:6px;padding-right:50px}
+.policy-box .updated{color:var(--ink-soft);font-weight:700;font-size:14px;margin:0 0 18px}
+.policy-box h3{font-size:20px;margin:22px 0 6px;font-weight:600}
+.policy-box p,.policy-box li{color:var(--ink);font-weight:500}
+.policy-box .fill{background:#fff3c4;padding:0 4px;border-radius:4px;font-weight:700}
+.lightbox-box{width:min(720px,100%);padding:30px;text-align:center}
+.lightbox-box .lb-media{background:var(--sky);border-radius:var(--radius);padding:20px;display:grid;place-items:center;min-height:420px}
+.lightbox-box .lb-media img{max-height:70vh;border-radius:10px}
+.lightbox-box .lb-media .ws{width:min(340px,100%);aspect-ratio:.77;height:auto;background:#fff}
+.lightbox-box h3{margin-top:16px;font-size:24px}
+.lb-nav{display:flex;justify-content:space-between;margin-top:14px}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+@media (max-width:1100px){
+  .footer-top{grid-template-columns:1fr 1fr 1fr}
+  .footer-brand{grid-column:1/-1}
+  .gallery{grid-template-columns:repeat(3,1fr)}
+}
+@media (max-width:980px){
+  :root{--header-h:64px}
+  .main-nav{display:none}
+  .menu-btn{display:grid}
+  .header-actions{margin-left:auto}
+  .slide-inner{grid-template-columns:1fr;padding:32px 0 100px;gap:8px}
+  .slide-art{justify-self:center;max-width:560px}
+  .slider-arrow{display:none}
+  .slider-dots{bottom:64px}
+  .benefits{grid-template-columns:repeat(3,1fr)}
+  .trust{grid-template-columns:repeat(2,1fr)}
+  .shop{grid-template-columns:1fr}
+  .cat-box{position:static;background:transparent;box-shadow:none;border:0;border-radius:0}
+  .cat-box h2{display:none}
+  .cat-list{display:flex;gap:8px;overflow-x:auto;padding:4px 0 10px;scrollbar-width:none;scroll-snap-type:x mandatory}
+  .cat-list::-webkit-scrollbar{display:none}
+  .cat-list li{flex:none;scroll-snap-align:start}
+  .cat-btn{background:#fff;border:2px solid var(--line);border-radius:999px;padding:8px 14px;white-space:nowrap;font-size:15px}
+  .cat-btn[aria-pressed="true"]{background:var(--blue);color:#fff;border-color:var(--blue)}
+  .cat-btn .c-ico{width:auto}
+  .cat-btn .count{display:none}
+  .steps{grid-template-columns:repeat(2,1fr);row-gap:34px}
+  .quotes{grid-template-columns:1fr}
+  .faq-wrap,.contact-grid{grid-template-columns:1fr}
+  .sample-box{grid-template-columns:1fr}
+  .sample-art{min-height:0;padding:18px 18px 0}
+  .sample-art img{max-width:260px}
+  .sample-art .ph-wrap{width:130px}
+  .sample-art img{max-width:190px}
+  .sample-box.done .sample-art{display:none}
+}
+@media (max-width:720px){
+  .card{grid-template-columns:1fr}
+  .card-media{min-height:0;padding:20px 20px 10px}
+  .card-media img{max-height:260px}
+  .card-body{padding:20px}
+  .gallery{grid-template-columns:repeat(2,1fr)}
+  .footer-top{grid-template-columns:1fr 1fr}
+  .section{padding:48px 0}
+}
+@media (max-width:520px){
+  body{font-size:15px}
+  .brand{font-size:18px}
+  .brand img{height:38px}
+  .header-actions .search-btn{display:none}
+  .benefits{grid-template-columns:repeat(2,1fr);padding:16px}
+  .benefit:last-child{grid-column:1/-1}
+  .trust{grid-template-columns:1fr 1fr}
+  .trust-item{padding:12px;font-size:14px;gap:8px}
+  .trust-item .t-ico{width:34px;height:34px}
+  .steps{grid-template-columns:1fr}
+  .cloud-badge{width:140px;font-size:15px;padding:18px 12px;top:0}
+  .modal{padding:0;align-items:flex-end}
+  .modal-box{border-radius:24px 24px 0 0;max-height:94dvh}
+  .sample-form{padding:24px 20px calc(24px + env(safe-area-inset-bottom,0px))}
+  .sample-art img{max-width:160px}
+  .header-actions .wa{display:none}
+  .benefit p{display:none}
+  .benefit .b-ico{width:54px;height:54px;font-size:28px}
+  .tab{font-size:15px}
+  .policy-box{padding:28px 20px}
+  .card-actions .btn{flex-basis:calc(50% - 5px)}
+  .card-actions .btn-orange{flex-basis:100%}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}
+}
+</style>
+</head>
+<body>
+
+<!-- ===== ICON SPRITE (do not edit) ===== -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></symbol>
+  <symbol id="i-chev-l" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></symbol>
+  <symbol id="i-chev-r" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></symbol>
+  <symbol id="i-chev-d" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol>
+  <symbol id="i-download" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/><path d="M12 15V3"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><rect x="6" y="2" width="12" height="20" rx="2"/><path d="M11 18h2"/></symbol>
+  <symbol id="i-lock" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+  <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></symbol>
+  <symbol id="i-alert" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/><path d="M9 10.5c.5 2 2.2 3.8 4.5 4.5l1.2-1.2 1.8.8v1.4"/></symbol>
+  <symbol id="i-file" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="m9 15 2 2 4-4"/></symbol>
+  <symbol id="i-bolt" viewBox="0 0 24 24"><path d="M13 2 3 14h9l-1 8 10-12h-9z"/></symbol>
+  <symbol id="i-printer" viewBox="0 0 24 24"><path d="M6 9V2h12v7"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></symbol>
+  <symbol id="i-infinity" viewBox="0 0 24 24"><path d="M12 12c-2-2.67-4-4-6-4a4 4 0 1 0 0 8c2 0 4-1.33 6-4Zm0 0c2 2.67 4 4 6 4a4 4 0 0 0 0-8c-2 0-4 1.33-6 4Z"/></symbol>
+  <symbol id="i-send" viewBox="0 0 24 24"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></symbol>
+  <symbol id="i-yt" viewBox="0 0 24 24"><path d="M2.5 17a24 24 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.6 49.6 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24 24 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.6 49.6 0 0 1-16.2 0A2 2 0 0 1 2.5 17"/><path d="m10 15 5-3-5-3z"/></symbol>
+  <symbol id="i-ig" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.5 6.5h.01"/></symbol>
+  <symbol id="i-fb" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></symbol>
+  <symbol id="i-xlogo" viewBox="0 0 24 24"><path d="M4 4l11.7 16H20L8.3 4z"/><path d="M4 20l6.8-6.8M20 4l-6.6 6.6"/></symbol>
+</svg>
+
+<!-- =========================================================
+     HEADER
+     ========================================================= -->
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="#top" aria-label="DigitalProducts.design home">
+      <img src="assets/logo-icon.png" alt="" width="59" height="46">
+      DigitalProducts.design
+    </a>
+    <nav class="main-nav" aria-label="Main">
+      <a href="#products" class="active">Products</a>
+      <a href="#products" data-shop="free">Free Downloads</a>
+      <a href="#how">How it Works</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <button class="icon-btn search-btn" type="button" data-action="focus-search" aria-label="Search worksheets"><svg class="icon"><use href="#i-search"/></svg></button>
+      <a class="icon-btn wa wa-pill" data-whatsapp href="#" target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><svg class="icon"><use href="#i-chat"/></svg><span class="wa-num" data-whatsapp-text>+91 9493778649</span></a>
+      <button class="icon-btn menu-btn" type="button" data-action="open-menu" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav"><svg class="icon"><use href="#i-menu"/></svg></button>
+    </div>
+  </div>
+</header>
+
+<div class="mobile-nav" id="mobileNav" aria-hidden="true">
+  <div class="scrim" data-action="close-menu"></div>
+  <nav class="panel" aria-label="Mobile">
+    <div class="close-row"><button class="icon-btn" type="button" data-action="close-menu" aria-label="Close menu"><svg class="icon"><use href="#i-x"/></svg></button></div>
+    <a href="#products" data-action="close-menu">Products</a>
+    <a href="#products" data-shop="free">🎁 Free Downloads</a>
+    <a href="#how" data-action="close-menu">How it Works</a>
+    <a href="#faq" data-action="close-menu">FAQ</a>
+    <a href="#contact" data-action="close-menu">Contact</a>
+    <a href="#" data-whatsapp target="_blank" rel="noopener" class="btn btn-green" style="margin-top:auto;font-family:var(--font-body);font-size:17px;color:#fff;justify-content:center"><svg class="icon"><use href="#i-chat"/></svg><span>Chat on WhatsApp<small data-whatsapp-text>+91 9493778649</small></span></a>
+  </nav>
+</div>
+
+<main id="top">
+
+<!-- =========================================================
+     HERO SLIDESHOW
+     To change a slide: edit its text below.
+     To replace placeholder art on slides 2–4: swap the
+     <div class="art-stage"> block for <img class="art-img" src="assets/your-image.jpg" alt="">
+     data-category  = which category "Shop Now" opens
+     data-product   = which product the "Free Sample" popup shows (product id)
+     ========================================================= -->
+<section class="hero" aria-roledescription="carousel" aria-label="Featured bundles">
+  <div class="cloud c1"></div><div class="cloud c2"></div>
+  <div class="slides" id="slides">
+
+    <!-- SLIDE 1 (your original design – text unchanged) -->
+    <div class="slide is-active" role="group" aria-roledescription="slide" aria-label="1 of 4">
+      <div class="wrap slide-inner">
+        <div class="slide-text">
+          <h1 class="slide-title">Kids’ <span class="t-pink">Brain</span><br>Workout</h1>
+          <div class="slide-label">Worksheet Bundle</div>
+          <p class="slide-desc">Fun and engaging worksheets to boost your child’s focus, memory, problem-solving, creative thinking and logical reasoning.</p>
+          <div class="slide-cta">
+            <button class="btn btn-blue" type="button" data-shop="all">Shop Now</button>
+            <button class="btn btn-orange" type="button" data-sample="adhd-full-bundle"><svg class="icon"><use href="#i-download"/></svg>Free Sample</button>
+          </div>
+        </div>
+        <div class="slide-art">
+          <!-- this image already contains the "Screen-Free Learning for a Brighter Tomorrow!" cloud -->
+          <img class="art-img" src="assets/hero-kids-brain-workout.jpg" alt="Boy pointing at the Kids’ Brain Workout worksheet bundle book with worksheets and pencils" width="942" height="636" fetchpriority="high">
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 2 -->
+    <div class="slide" role="group" aria-roledescription="slide" aria-label="2 of 4">
+      <div class="wrap slide-inner">
+        <div class="slide-text">
+          <h2 class="slide-title">Calm, <span class="t-green">Focus</span><br>&amp; Grow</h2>
+          <div class="slide-label">ADHD Worksheet Bundle</div>
+          <p class="slide-desc">Social-emotional worksheets for kids with ADHD. 5 age-based Parts, 40 books and 9,700+ activities for ages 2–10.</p>
+          <div class="slide-cta">
+            <button class="btn btn-blue" type="button" data-shop="adhd">Shop Now</button>
+            <button class="btn btn-orange" type="button" data-sample="adhd-full-bundle"><svg class="icon"><use href="#i-download"/></svg>Free Sample</button>
+          </div>
+        </div>
+        <div class="slide-art">
+          <img class="art-img" src="assets/adhd-all-parts-covers.jpg" alt="The 5 book covers: Understanding Feelings, Feeling Explorers, Feeling Detectives, Mind Builders and Confident Kids" width="1222" height="383" loading="lazy" style="-webkit-mask-image:none;mask-image:none;box-shadow:0 18px 40px rgba(11,31,107,.18);margin-bottom:40px">
+          <div class="cloud-badge" style="top:-34%">Full Bundle<br><span>only ₹200!</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 3 -->
+    <div class="slide" role="group" aria-roledescription="slide" aria-label="3 of 4">
+      <div class="wrap slide-inner">
+        <div class="slide-text">
+          <h2 class="slide-title">Pencil <span class="t-blue">Control</span><br>Fun</h2>
+          <div class="slide-label">Pre-Writing Book</div>
+          <p class="slide-desc">5 printable workbooks, 500+ pages: trace lines, curves and shapes to build a steady hand before writing letters.</p>
+          <div class="slide-cta">
+            <button class="btn btn-blue" type="button" data-shop="prewriting">Shop Now</button>
+            <button class="btn btn-orange" type="button" data-sample="pencil-control"><svg class="icon"><use href="#i-download"/></svg>Free Sample</button>
+          </div>
+        </div>
+        <div class="slide-art">
+          <div class="art-stage" data-cover="pencil-control">
+            <div class="sheet s1"></div><div class="sheet s2"></div>
+            <div class="book"></div>
+            <span class="art-emoji" style="left:4%;bottom:8%">✏️</span>
+            <span class="art-emoji" style="right:10%;bottom:4%">⭐</span>
+          </div>
+          <div class="cloud-badge">Steady Hands,<br><span>Ready to Write!</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 4 -->
+    <div class="slide" role="group" aria-roledescription="slide" aria-label="4 of 4">
+      <div class="wrap slide-inner">
+        <div class="slide-text">
+          <h2 class="slide-title">English <span class="t-orange">Spelling</span><br>Fun</h2>
+          <div class="slide-label">Worksheet Bundle</div>
+          <p class="slide-desc">10 levels, 520 pages and 1,290+ activities that grow your child’s spelling from beginning sounds to big words.</p>
+          <div class="slide-cta">
+            <button class="btn btn-blue" type="button" data-shop="english">Shop Now</button>
+            <button class="btn btn-orange" type="button" data-sample="english-spelling"><svg class="icon"><use href="#i-download"/></svg>Free Sample</button>
+          </div>
+        </div>
+        <div class="slide-art">
+          <div class="art-stage"><div class="sheet s1"></div><div class="sheet s2"></div><div class="book"><img src="assets/english-spelling-cover.jpg" alt="English Spelling Level 1 Beginning Sounds cover" style="border-radius:10px;box-shadow:0 14px 30px rgba(11,31,107,.25)" loading="lazy"></div><span class="art-emoji" style="left:4%;bottom:8%">🔤</span><span class="art-emoji" style="right:10%;bottom:4%">📚</span></div>
+          <div class="cloud-badge">Learn Words<br><span>the Fun Way!</span></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <button class="slider-arrow prev" type="button" aria-label="Previous slide"><svg class="icon"><use href="#i-chev-l"/></svg></button>
+  <button class="slider-arrow next" type="button" aria-label="Next slide"><svg class="icon"><use href="#i-chev-r"/></svg></button>
+  <div class="slider-dots" role="tablist" aria-label="Choose slide"></div>
+</section>
+
+<!-- =========================================================
+     PRODUCTS (filled automatically from the PRODUCTS list in the script)
+     ========================================================= -->
+<section class="section" id="products">
+  <div class="wrap shop">
+    <aside class="cat-box" aria-label="Categories">
+      <h2>Category</h2>
+      <ul class="cat-list" id="catList"></ul>
+    </aside>
+    <div>
+      <div class="section-head">
+        <div>
+          <h2 class="section-title" id="shopTitle">All Products</h2>
+          <p class="section-sub" id="shopCount"></p>
+        </div>
+        <label class="search">
+          <span class="sr-only">Search worksheets</span>
+          <svg class="icon"><use href="#i-search"/></svg>
+          <input type="search" id="searchInput" placeholder="Search worksheets…" autocomplete="off">
+        </label>
+      </div>
+      <div class="product-list" id="productList" aria-live="polite"></div>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================
+     HOW IT WORKS
+     ========================================================= -->
+<section class="section" id="how">
+  <div class="wrap">
+    <div class="section-head"><div><h2 class="section-title">How it works</h2><p class="section-sub">From click to printed worksheet in a few minutes.</p></div></div>
+    <ol class="steps">
+      <li class="step" style="--c:var(--blue)"><div class="s-ico">🛍️</div><h3>Choose</h3><p>Pick a bundle or level that fits your child’s age.</p></li>
+      <li class="step" style="--c:var(--green)"><div class="s-ico">🔒</div><h3>Pay on SuperProfile</h3><p>Pay safely with UPI, card or net banking.</p></li>
+      <li class="step" style="--c:var(--orange)"><div class="s-ico">📩</div><h3>Get the PDF by email</h3><p>Your download link arrives right after payment.</p></li>
+      <li class="step" style="--c:var(--pink)"><div class="s-ico">🖨️</div><h3>Print &amp; learn</h3><p>Print at home or school as many times as you need.</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- =========================================================
+     TESTIMONIALS (replace with real reviews)
+     ========================================================= -->
+<section class="section bg-sky" id="reviews">
+  <div class="wrap">
+    <div class="section-head"><div><h2 class="section-title">What parents and teachers say</h2></div></div>
+    <div class="quotes">
+      <figure class="quote">
+        <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+        <blockquote>My son asks for “one more page” every evening. The short feelings activities keep him calm and busy without a screen.</blockquote>
+        <figcaption><span class="avatar" style="--c:var(--pink)">P</span><span><strong>Priya S.</strong><small>Parent of a 6-year-old</small></span></figcaption>
+      </figure>
+      <figure class="quote">
+        <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+        <blockquote>I print these for my UKG class. Clear layouts, big pictures, and the levels make it easy to give each child the right page.</blockquote>
+        <figcaption><span class="avatar" style="--c:var(--blue)">R</span><span><strong>Ramya K.</strong><small>Teacher</small></span></figcaption>
+      </figure>
+      <figure class="quote">
+        <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+        <blockquote>The download came instantly and printing was simple. Great value for the number of pages.</blockquote>
+        <figcaption><span class="avatar" style="--c:var(--green)">A</span><span><strong>Arjun M.</strong><small>Parent, Dubai</small></span></figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================
+     FAQ
+     ========================================================= -->
+<section class="section" id="faq">
+  <div class="wrap faq-wrap">
+    <div>
+      <h2 class="section-title">Questions parents ask</h2>
+      <p class="section-sub">Can’t find your answer? Message us on WhatsApp.</p>
+      <a class="btn btn-green" data-whatsapp href="#" target="_blank" rel="noopener" style="margin-top:18px"><svg class="icon"><use href="#i-chat"/></svg><span>Ask on WhatsApp<small data-whatsapp-text>+91 9493778649</small></span></a>
+    </div>
+    <div class="faq">
+      <details open><summary>Is this a physical book?<svg class="icon"><use href="#i-chev-d"/></svg></summary><div class="ans"><p>No. You get a printable PDF file. Nothing is shipped, so you can start the same day.</p></div></details>
+      <details><summary>How do I get the file after paying?<svg class="icon"><use href="#i-chev-d"/></svg></summary><div class="ans"><p>After payment on SuperProfile, the download link is shown on screen and sent to your email. Check your Spam or Promotions folder if you don’t see it.</p></div></details>
+      <details><summary>Can I print the pages many times?<svg class="icon"><use href="#i-chev-d"/></svg></summary><div class="ans"><p>Yes. Print as often as you like for your own children or your own classroom. Please don’t share or resell the file.</p></div></details>
+      <details><summary>What age is it for?<svg class="icon"><use href="#i-chev-d"/></svg></summary><div class="ans"><p>Each product shows its age range. Our books cover ages 2 to 10. The ADHD worksheets come in 5 age-based Parts, so you can start at your child’s age.</p></div></details>
+      <details><summary>Can I get a refund?<svg class="icon"><use href="#i-chev-d"/></svg></summary><div class="ans"><p>Because the files are digital, purchases can’t be refunded after download. If a file is broken or you got the wrong one, contact us and we’ll fix it. <button type="button" class="link-btn" data-policy="refund" style="border:0;background:none;color:var(--blue);font-weight:800;padding:0">Read the refund policy</button></p></div></details>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================
+     FEATURES
+     ========================================================= -->
+<section class="features" aria-label="Why parents choose these worksheets">
+  <div class="wrap">
+    <div class="benefits">
+      <div class="benefit"><div class="b-ico" style="--bg:#ffe3ec">🧠</div><h3>Improves Focus</h3><p>Short tasks that hold attention</p></div>
+      <div class="benefit"><div class="b-ico" style="--bg:#e1f7e8">🧩</div><h3>Builds Problem Solving</h3><p>Puzzles, mazes and patterns</p></div>
+      <div class="benefit"><div class="b-ico" style="--bg:#fff3cf">💡</div><h3>Enhances Memory</h3><p>Matching and recall games</p></div>
+      <div class="benefit"><div class="b-ico" style="--bg:#e3edff">🎨</div><h3>Boosts Creativity</h3><p>Drawing and coloring pages</p></div>
+      <div class="benefit"><div class="b-ico" style="--bg:#f3e5fb">🎯</div><h3>Develops Logical Thinking</h3><p>Sorting, sequencing, logic</p></div>
+    </div>
+    <div class="trust">
+      <div class="trust-item"><span class="t-ico"><svg class="icon"><use href="#i-bolt"/></svg></span>Instant Download</div>
+      <div class="trust-item"><span class="t-ico"><svg class="icon"><use href="#i-printer"/></svg></span>Printable PDF</div>
+      <div class="trust-item"><span class="t-ico"><svg class="icon"><use href="#i-shield"/></svg></span>Secure Payment</div>
+      <div class="trust-item"><span class="t-ico"><svg class="icon"><use href="#i-infinity"/></svg></span>Lifetime Access</div>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================
+     CONTACT
+     ========================================================= -->
+<section class="section bg-sky" id="contact">
+  <div class="wrap">
+    <div class="section-head"><div><h2 class="section-title">Contact us</h2><p class="section-sub">We usually reply within one working day.</p></div></div>
+    <div class="contact-grid">
+      <div class="contact-cards">
+        <a class="c-card" data-whatsapp href="#" target="_blank" rel="noopener"><span class="c-ico" style="--c:#25d366"><svg class="icon"><use href="#i-chat"/></svg></span><span><strong>WhatsApp</strong><span data-whatsapp-text>Chat with us</span></span></a>
+        <a class="c-card" data-email href="#"><span class="c-ico" style="--c:var(--blue)"><svg class="icon"><use href="#i-mail"/></svg></span><span><strong>Email</strong><span data-email-text></span></span></a>
+        <a class="c-card" href="https://www.youtube.com/@DigitalProducts.design" target="_blank" rel="noopener"><span class="c-ico" style="--c:#ff0000"><svg class="icon"><use href="#i-yt"/></svg></span><span><strong>YouTube</strong><span>@DigitalProducts.design</span></span></a>
+      </div>
+      <form class="form" id="contactForm" novalidate>
+        <label>Your name<input class="field" name="name" required autocomplete="name"></label>
+        <label>Your email or WhatsApp number<input class="field" name="reach" required autocomplete="email"></label>
+        <label>Message<textarea class="field" name="message" required></textarea></label>
+        <button class="btn btn-blue" type="submit"><svg class="icon"><use href="#i-send"/></svg>Send message</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- =========================================================
+     FOOTER
+     ========================================================= -->
+<footer class="site-footer">
+  <div class="wrap footer-top">
+    <div class="footer-brand">
+      <img src="assets/logo-full.png" alt="DigitalProducts.design – Create, Learn, Plan, Grow" width="367" height="214" loading="lazy">
+      <p>Printable, screen-free learning for curious kids.</p>
+    </div>
+    <div class="f-col">
+      <h3>Company</h3>
+      <ul><li><a href="#how">About</a></li><li><button type="button" data-policy="contact">Contact</button></li><li><a href="#reviews">Reviews</a></li></ul>
+    </div>
+    <div class="f-col">
+      <h3>Resources</h3>
+      <ul><li><a href="#products" data-shop="all">Worksheets</a></li><li><a href="#products" data-shop="free">Free Downloads</a></li><li><a href="#products" data-shop="adhd">ADHD Worksheets</a></li><li><a href="#products" data-shop="phonics">Phonics</a></li><li><a href="#faq">FAQ</a></li></ul>
+    </div>
+    <div class="f-col">
+      <h3>Support</h3>
+      <ul>
+        <li><button type="button" data-policy="terms">Terms &amp; Conditions</button></li>
+        <li><button type="button" data-policy="privacy">Privacy Policy</button></li>
+        <li><button type="button" data-policy="refund">Refund &amp; Cancellation</button></li>
+        <li><button type="button" data-policy="delivery">Delivery Policy</button></li>
+      </ul>
+    </div>
+    <div class="f-col social">
+      <h3>Follow us</h3>
+      <!-- PASTE your social links in the href="" -->
+      <ul>
+        <li><a href="https://www.youtube.com/@DigitalProducts.design" target="_blank" rel="noopener"><span class="s-ico" style="--c:#ff0000"><svg class="icon"><use href="#i-yt"/></svg></span>YouTube</a></li>
+        <li><a href="https://www.instagram.com/digit_alproduct2028/" target="_blank" rel="noopener"><span class="s-ico" style="--c:#e1306c"><svg class="icon"><use href="#i-ig"/></svg></span>Instagram</a></li>
+        <li><a href="https://facebook.com/" target="_blank" rel="noopener"><span class="s-ico" style="--c:#1877f2"><svg class="icon"><use href="#i-fb"/></svg></span>Facebook</a></li>
+        <li><a href="https://pin.it/20GLjJyu3" target="_blank" rel="noopener"><span class="s-ico" style="--c:#e60023">P</span>Pinterest</a></li>
+        <li><a href="https://x.com/digitalpromte" target="_blank" rel="noopener"><span class="s-ico" style="--c:#111"><svg class="icon"><use href="#i-xlogo"/></svg></span>X</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="wrap">
+      <p><strong>Disclaimer:</strong> The resources on this website are for educational and informational purposes only. They support learning and are not a substitute for professional advice. Please review our <button type="button" data-policy="terms" style="background:none;border:0;padding:0;color:#fff;font-weight:800;text-decoration:underline">Terms and Conditions</button> for full details.</p>
+      <p>WhatsApp: <a data-whatsapp href="#" target="_blank" rel="noopener" style="color:#fff;font-weight:800"><span data-whatsapp-text>+91 9493778649</span></a><br>© <span id="year">2026</span> DigitalProducts.design. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<a class="wa-float" data-whatsapp href="#" target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><svg class="icon"><use href="#i-chat"/></svg></a>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<!-- =========================================================
+     FREE SAMPLE POPUP
+     ========================================================= -->
+<div class="modal" id="sampleModal" aria-hidden="true">
+  <div class="modal-scrim" data-close></div>
+  <div class="modal-box sample-box" role="dialog" aria-modal="true" aria-labelledby="sampleTitle">
+    <button class="modal-close" type="button" data-close aria-label="Close"><svg class="icon"><use href="#i-x"/></svg></button>
+    <div class="sample-art" id="sampleArt"></div>
+    <div class="sample-form">
+      <form id="sampleForm" novalidate style="display:flex;flex-direction:column;gap:14px">
+        <span class="pill">Get free sample</span>
+        <h2 id="sampleTitle">Download Sample <span>Worksheet</span></h2>
+        <p class="lead"><span id="sampleLeadStart">Enter your email or mobile number to get a free sample worksheet from our </span><strong id="sampleProduct">Kids’ Brain Workout Bundle</strong>.</p>
+
+        <div class="tabs" role="tablist" aria-label="How should we send it?">
+          <button class="tab" type="button" role="tab" id="tabEmail" aria-selected="true" aria-controls="panelEmail" data-mode="email"><svg class="icon"><use href="#i-mail"/></svg>Email</button>
+          <button class="tab" type="button" role="tab" id="tabMobile" aria-selected="false" aria-controls="panelMobile" data-mode="mobile"><svg class="icon"><use href="#i-phone"/></svg>Mobile Number</button>
+        </div>
+
+        <div id="panelEmail" role="tabpanel" aria-labelledby="tabEmail" class="input-ico">
+          <label for="sampleEmail" class="sr-only">Gmail or Yahoo email</label>
+          <svg class="icon"><use href="#i-mail"/></svg>
+          <input class="field" id="sampleEmail" type="email" inputmode="email" autocomplete="email" placeholder="yourname@gmail.com">
+        </div>
+        <div id="panelMobile" role="tabpanel" aria-labelledby="tabMobile" hidden>
+          <label for="samplePhone" class="sr-only">Mobile number with country code</label>
+          <input class="field" id="samplePhone" type="tel" inputmode="tel" autocomplete="tel" placeholder="Mobile number">
+        </div>
+
+        <div class="note hint" id="sampleHint"><svg class="icon"><use href="#i-info"/></svg><span>We accept Gmail, Yahoo or a mobile number with country code.</span></div>
+        <div class="note error" id="sampleError" role="alert" hidden><svg class="icon"><use href="#i-alert"/></svg><span></span></div>
+
+        <label class="check"><input type="checkbox" id="sampleConsent"> I agree to receive updates and offers from DigitalProducts.design.</label>
+        <!-- spam trap: real people never see or fill this -->
+        <input class="hp" type="text" name="website" id="sampleHp" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+        <button class="btn btn-blue btn-submit" type="submit" id="sampleSubmit">
+          <span class="spinner" aria-hidden="true"></span>
+          <svg class="icon btn-ico"><use href="#i-download"/></svg>
+          <span id="sampleSubmitText">Send Sample Worksheet</span>
+        </button>
+        <p class="privacy"><svg class="icon"><use href="#i-lock"/></svg><span>We respect your privacy. Your information is only used to send the sample and, if you agree, occasional updates.</span></p>
+      </form>
+
+      <div class="success" id="sampleSuccess" aria-live="polite">
+        <div class="tick"><svg class="icon"><use href="#i-check"/></svg></div>
+        <h3>Your sample is on the way!</h3>
+        <p id="successText"></p>
+        <a class="btn btn-orange" id="successDownload" href="#" target="_blank" rel="noopener" hidden><svg class="icon"><use href="#i-download"/></svg>Download again</a>
+        <button class="btn btn-ghost" type="button" data-close>Back to worksheets</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- =========================================================
+     POLICY POPUP (content comes from the <template> blocks below)
+     ========================================================= -->
+<div class="modal" id="policyModal" aria-hidden="true">
+  <div class="modal-scrim" data-close></div>
+  <div class="modal-box policy-box" role="dialog" aria-modal="true" aria-labelledby="policyTitle">
+    <button class="modal-close" type="button" data-close aria-label="Close"><svg class="icon"><use href="#i-x"/></svg></button>
+    <div id="policyContent"></div>
+  </div>
+</div>
+
+<!-- =========================================================
+     GALLERY LIGHTBOX
+     ========================================================= -->
+<div class="modal" id="lightbox" aria-hidden="true">
+  <div class="modal-scrim" data-close></div>
+  <div class="modal-box lightbox-box" role="dialog" aria-modal="true" aria-labelledby="lbTitle">
+    <button class="modal-close" type="button" data-close aria-label="Close"><svg class="icon"><use href="#i-x"/></svg></button>
+    <div class="lb-media" id="lbMedia"></div>
+    <h3 id="lbTitle"></h3>
+    <div class="lb-nav">
+      <button class="btn btn-white" type="button" id="lbPrev"><svg class="icon"><use href="#i-chev-l"/></svg>Previous</button>
+      <button class="btn btn-white" type="button" id="lbNext">Next<svg class="icon"><use href="#i-chev-r"/></svg></button>
+    </div>
+  </div>
+</div>
+
+<!-- =========================================================
+     POLICY TEXT — fill in the yellow highlighted parts.
+     (This is a starting template, not legal advice.)
+     ========================================================= -->
+<template id="policy-terms">
+  <h2 id="policyTitle">Terms &amp; Conditions</h2>
+  <p class="updated">Last updated: October 2026</p>
+  <p>These terms apply when you use digitalproducts.design or buy a product from us. DigitalProducts.design is run by <span class="fill">[Your full name / business name]</span>, <span class="fill">[Your city]</span>, India.</p>
+  <h3>Digital products</h3>
+  <p>All products are digital files (PDF). Nothing is shipped. Payments are processed by SuperProfile and its payment partners.</p>
+  <h3>Your licence</h3>
+  <p>After purchase you may download and print the files for your own family or your own classroom. You may not resell, share, upload, or redistribute the files, in full or in part.</p>
+  <h3>Educational use</h3>
+  <p>Our worksheets support learning at home and school. They are not medical, psychological or therapeutic advice. For concerns about attention, emotions or development, please speak with a qualified professional.</p>
+  <h3>Prices</h3>
+  <p>Prices are shown in Indian Rupees (₹) and may change at any time. The price at checkout is the price you pay.</p>
+  <h3>Contact</h3>
+  <p>Questions about these terms: <span class="fill" data-email-text></span></p>
+</template>
+
+<template id="policy-privacy">
+  <h2 id="policyTitle">Privacy Policy</h2>
+  <p class="updated">Last updated: October 2026</p>
+  <p>We collect only what we need to send you samples and products. We follow India’s Digital Personal Data Protection Act, 2023.</p>
+  <h3>What we collect</h3>
+  <ul>
+    <li>Your email address or mobile number when you request a free sample.</li>
+    <li>Whether you agreed to receive updates.</li>
+    <li>The product you asked for and the date and time of your request.</li>
+    <li>Purchase details shared by SuperProfile when you buy.</li>
+  </ul>
+  <h3>Where it is stored</h3>
+  <p>Sample requests are stored in a private Google Sheet that only we can access. Payments are handled by SuperProfile; we never see your card or UPI details.</p>
+  <h3>How we use it</h3>
+  <p>To send the sample you asked for, answer your questions, and, only if you agreed, send occasional updates and offers. We never sell your data.</p>
+  <h3>Your rights</h3>
+  <p>You can ask us to see, correct or delete your data, or stop updates, at any time by emailing <span class="fill" data-email-text></span>. We delete sample-request data we no longer need.</p>
+  <h3>Children</h3>
+  <p>Our products are for children, but this website is for parents and teachers. Please don’t let children submit their own details.</p>
+</template>
+
+<template id="policy-refund">
+  <h2 id="policyTitle">Refund &amp; Cancellation Policy</h2>
+  <p class="updated">Last updated: October 2026</p>
+  <p>Our products are digital files delivered instantly, so orders can’t be cancelled or refunded once the file is available to download.</p>
+  <h3>When we will help</h3>
+  <ul>
+    <li>The file is broken or won’t open.</li>
+    <li>You received the wrong product.</li>
+    <li>You were charged twice for the same order.</li>
+  </ul>
+  <p>In these cases, contact us within 7 days of purchase with your order ID. We will send the correct file or refund you to the original payment method within 5–7 working days.</p>
+  <h3>How to reach us</h3>
+  <p>Email <span class="fill" data-email-text></span> or message us on WhatsApp.</p>
+</template>
+
+<template id="policy-delivery">
+  <h2 id="policyTitle">Delivery Policy</h2>
+  <p class="updated">Last updated: October 2026</p>
+  <p>All products are delivered digitally. There is no physical shipping.</p>
+  <h3>How you receive your file</h3>
+  <p>Right after successful payment on SuperProfile, the download link is shown on screen and sent to the email you entered at checkout. Delivery usually takes less than 5 minutes.</p>
+  <h3>Didn’t get it?</h3>
+  <p>Check your Spam and Promotions folders. If it isn’t there after 30 minutes, contact us with your payment details and we’ll resend it.</p>
+</template>
+
+<template id="policy-contact">
+  <h2 id="policyTitle">Contact Us</h2>
+  <p class="updated">We reply within one working day.</p>
+  <h3>Business name</h3>
+  <p><span class="fill">[Your full name / business name]</span></p>
+  <h3>Address</h3>
+  <p><span class="fill">[Your full business address, city, PIN code]</span></p>
+  <h3>Email</h3>
+  <p><span data-email-text></span></p>
+  <h3>WhatsApp</h3>
+  <p><span data-whatsapp-text></span></p>
+</template>
+
+<!-- Country-code phone field library (pinned version) -->
+<script src="https://cdn.jsdelivr.net/npm/intl-tel-input@18.2.1/build/js/intlTelInput.min.js"></script>
+<script>
+/* =====================================================================
+   1. YOUR SETTINGS — edit these
+   ===================================================================== */
+const CONFIG = {
+  // Paste the Web App URL you get from Google Apps Script (see SETUP-GUIDE.md).
+  // Until you paste it, the popup works in "demo mode" and saves nothing.
+  SCRIPT_URL: "PASTE_YOUR_SCRIPT_URL_HERE",
+
+  // WhatsApp: country code + number, no "+" and no spaces. Example: 919876543210
+  WHATSAPP_NUMBER: "919493778649",
+  WHATSAPP_DISPLAY: "+91 9493778649",
+  WHATSAPP_MESSAGE: "Hi! I have a question about your worksheets.",
+
+  CONTACT_EMAIL: "digitalproduct2028@gmail.com",
+
+  CURRENCY: "₹",
+  DEFAULT_COUNTRY: "in"   // country shown first in the phone field if location can't be detected
+};
+
+/* =====================================================================
+   2. CATEGORIES — the left menu
+   ===================================================================== */
+const CATEGORIES = [
+  { id: "all",        name: "All",               icon: "🏠", heading: "All Products" },
+  { id: "adhd",       name: "Children’s – ADHD", icon: "🧠", heading: "Social-Emotional Worksheets for Kids with ADHD" },
+  { id: "english",    name: "English",           icon: "📖", heading: "English Worksheets" },
+  { id: "prewriting", name: "Pre-Writing",       icon: "✏️", heading: "Pencil Control & Pre-Writing" },
+  { id: "phonics",    name: "Phonics",           icon: "🔤", heading: "Phonics Books" },
+  { id: "free",       name: "Free Download",     icon: "🎁", heading: "Free Downloads" }
+];
+
+/* =====================================================================
+   3. PRODUCTS — add, remove or edit products here.
+   ---------------------------------------------------------------------
+   id          short unique name, no spaces (used by the slides & sample popup)
+   category    one of the category ids above
+   title       first line of the title (dark blue)
+   title2      second line of the title (bright blue)
+   images      3 pictures that play on mouse hover (scene 1, 2, 3), e.g.
+               ["assets/x-cover.jpg", "assets/x-page.jpg", "assets/x-inside.jpg"]
+               Scene 1 shows when the mouse is away. Leave [] (or add fewer
+               than 3) and the missing scenes are drawn automatically.
+   cover       colors/emoji for the automatic scenes
+   sampleArt   (optional) bigger picture for the sample popup
+   description 1–2 short sentences
+   ages, pages small tags
+   badge       "Bestseller", "New", "Best value" or "" for none
+   oldPrice    crossed-out price (number) or 0
+   options     buy buttons: label, price, link (your SuperProfile payment link)
+   sampleFile  free sample PDF — paste the Google Drive "Anyone with the link" share link
+               (or a path like "samples/x.pdf")
+   bundle      true = highlighted yellow bundle card
+   sample      false = hide the Free Sample button for this product
+   free        true = free product: shows FREE and one "Download now" button
+               (it opens the same email / mobile popup, then gives the PDF)
+   ===================================================================== */
+const PRODUCTS = [
+  /* ---------- 01 · Social-Emotional Worksheets for Kids with ADHD ---------- */
+  {
+    id: "adhd-full-bundle", category: "adhd", bundle: true,
+    title: "Social-Emotional Worksheets for Kids with ADHD", title2: "Full Bundle · All 5 Parts",
+    images: ["assets/adhd-all-parts-covers.jpg", "assets/adhd-part1-page-a.jpg", "assets/adhd-part4-page-a.jpg"],
+    sampleArt: "assets/adhd-free-sample-cover.jpg", sampleName: "Calm, Focus & Grow ADHD worksheets",
+    description: "Calm, Focus & Grow: all 5 age-based Parts in one download. 40 books with short, visual activities for feelings, calming down, friendship, safety, habits and resilience.",
+    ages: "Ages 2–10", pages: "40 books · 9,700+ activities", badge: "Best value", oldPrice: 250,
+    options: [ { label: "Full Bundle", price: 200, link: "https://superprofile.bio/vp/social-emotional-worksheets-for-kids-with-adhd–complete-bundle--ages-2–10-" } ],
+    sampleFile: "https://drive.google.com/file/d/1f1fRjtgZLSaecHdl-04G1cks0VaKAVJQ/view?usp=sharing"
+  },
+  {
+    id: "adhd-part-1", category: "adhd",
+    title: "Social-Emotional Worksheets for Kids with ADHD", title2: "Part 1 · Little Learners",
+    images: ["assets/adhd-part1-cover.jpg", "assets/adhd-part1-page-a.jpg", "assets/adhd-part1-page-b.jpg"],
+    description: "8 books for ages 2–3: Understanding Feelings, Emotional Regulation, Confidence & Self-Esteem, Friendship & Social Skills, Personal Boundaries & Safety, Thinking Skills, Healthy Habits and Resilience.",
+    ages: "Ages 2–3", pages: "8 books · 54 pages each", badge: "", oldPrice: 99,
+    options: [ { label: "Part 1", price: 50, link: "https://superprofile.bio/vp/social-emotional-worksheets---kids-with-adhd-part-1-understanding-feelings" } ],
+    sample: false   // free sample is offered on the Full Bundle only
+  },
+  {
+    id: "adhd-part-2", category: "adhd",
+    title: "Social-Emotional Worksheets for Kids with ADHD", title2: "Part 2 · Feeling Explorers",
+    images: ["assets/adhd-part2-cover.jpg", "assets/adhd-part2-page-a.jpg", "assets/adhd-part2-page-b.jpg"],
+    description: "8 books for ages 4–5: Recognizing Feelings, When I Feel Angry, Things I Am Good At, Sharing & Taking Turns, Safe Touch, Spot the Problem, Clean & Healthy Habits and When Things Don’t Go My Way.",
+    ages: "Ages 4–5", pages: "8 books · 54 pages each", badge: "", oldPrice: 99,
+    options: [ { label: "Part 2", price: 50, link: "https://superprofile.bio/vp/part-2--feeling-explorers---ages-4–5" } ],
+    sample: false   // free sample is offered on the Full Bundle only
+  },
+  {
+    id: "adhd-part-3", category: "adhd",
+    title: "Social-Emotional Worksheets for Kids with ADHD", title2: "Part 3 · Feeling Detectives",
+    images: ["assets/adhd-part3-cover.jpg", "assets/adhd-part3-page-a.jpg", "assets/adhd-part3-page-b.jpg"],
+    description: "8 books for ages 6–7: Understanding Emotions, Managing Big Anger, Building Confidence, Being a Kind Friend, Saying No & Asking for Help, Finding Solutions, My Healthy Day Plan and Mistakes Help Me Grow.",
+    ages: "Ages 6–7", pages: "8 books · 54 pages each", badge: "", oldPrice: 99,
+    options: [ { label: "Part 3", price: 50, link: "https://superprofile.bio/vp/part-3--feeling-detectives---ages-6–7" } ],
+    sample: false   // free sample is offered on the Full Bundle only
+  },
+  {
+    id: "adhd-part-4", category: "adhd",
+    title: "Social-Emotional Worksheets for Kids with ADHD", title2: "Part 4 · Mind Builders",
+    images: ["assets/adhd-part4-cover.jpg", "assets/adhd-part4-page-a.jpg", "assets/adhd-part4-page-b.jpg"],
+    description: "8 books for ages 8–9: Exploring Emotions, Coping with Stress, Positive Self-Talk, Solving Friendship Problems, Respecting Boundaries, Helpful vs. Unhelpful Thoughts, Time Management & Gratitude and Accepting Change.",
+    ages: "Ages 8–9", pages: "8 books · 54 pages each", badge: "", oldPrice: 99,
+    options: [ { label: "Part 4", price: 50, link: "https://superprofile.bio/vp/part-4--mind-builders---ages-8–9" } ],
+    sample: false   // free sample is offered on the Full Bundle only
+  },
+  {
+    id: "adhd-part-5", category: "adhd",
+    title: "Social-Emotional Worksheets for Kids with ADHD", title2: "Part 5 · Confident Kids",
+    images: ["assets/adhd-part5-cover.jpg", "assets/adhd-part5-page-a.jpg", "assets/adhd-part5-page-b.jpg"],
+    description: "8 books for age 10: Emotional Awareness, Building Self-Control, Self-Esteem & Independence, Healthy Relationships, Making Safe Decisions, Smart Decision-Making, Goal Setting and Bouncing Back.",
+    ages: "Age 10", pages: "8 books · 54 pages each", badge: "", oldPrice: 99,
+    options: [ { label: "Part 5", price: 50, link: "https://superprofile.bio/vp/part-5--confident-kids---age-10" } ],
+    sample: false   // free sample is offered on the Full Bundle only
+  },
+
+  /* ---------- 02 · English Spelling ---------- */
+  {
+    id: "english-spelling", category: "english",
+    title: "English Spelling", title2: "Bundle Worksheets",
+    images: ["assets/english-spelling-cover.jpg", "assets/english-spelling-page-a.jpg", "assets/english-spelling-page-b.jpg"],
+    sampleArt: "assets/english-spelling-whats-inside.jpg", sampleName: "English Spelling Worksheet Bundle",
+    description: "10 levels from Beginning Sounds to Spelling Champion: CVC words, blends, digraphs, magic E, sight words, word families, plurals and homophones. Answer keys and certificates included.",
+    ages: "Ages 3–10", pages: "10 books · 520 pages · 1,290+ activities", badge: "New", oldPrice: 199,
+    options: [ { label: "Bundle", price: 99, link: "https://superprofile.bio/vp/printable-english-spelling-workbooks--10-books--1-290--activities" } ],
+    sampleFile: "https://drive.google.com/file/d/1vQEVS0nyq_RgW6rcfeXfAi9A3TW0VpKx/view?usp=sharing"
+  },
+
+  /* ---------- 03 · Pencil Control & Pre-Writing ---------- */
+  {
+    id: "pencil-control", category: "prewriting",
+    title: "Pencil Control &", title2: "Pre-Writing",
+    images: [], cover: { color: "#1360f0", emoji: "🖍️", ribbon: "Pre-Writing Book" },
+    description: "Pre-Writing Mega Bundle: 5 printable workbooks to trace lines, curves, zig-zags and shapes, building a steady hand and strong grip before writing letters.",
+    ages: "Ages 2–7", pages: "5 workbooks · 500+ pages", badge: "New", oldPrice: 199,
+    options: [ { label: "Mega Bundle", price: 99, link: "https://superprofile.bio/vp/pre-writing-mega-bundle-for-kids-ages-2–7-5-printable-workbooks-500--pages" } ],
+    sampleFile: "https://drive.google.com/file/d/1oZeng8WoHT2wLnWFir7wue8hiO34tO_O/view?usp=sharing"
+  },
+
+  /* ---------- 04 · Phonics Book ---------- */
+  {
+    id: "phonics-book", category: "phonics",
+    title: "Learn to Read:", title2: "Phonics Activity Book",
+    images: [], cover: { color: "#a03bd6", emoji: "🔤", ribbon: "Phonics Book" },
+    description: "Complete phonics activity book: letter sounds, blending and first words with fun activities on every page.",
+    ages: "Ages 3–7", pages: "350 pages", badge: "New", oldPrice: 199,
+    options: [ { label: "Book", price: 99, link: "https://superprofile.bio/vp/learn-to-read--complete-phonics-activity-book----printable-pdf-" } ],
+    sampleFile: "https://drive.google.com/file/d/1Ldgn5njx-KMMYZAR3SQhKrxBP2n4Jhsb/view?usp=sharing"
+  },
+  /* ---------- FREE DOWNLOADS ----------
+     "Download now" opens the same email / mobile popup as the samples,
+     then gives the free book. sampleFile = Google Drive link of the PDF. */
+  {
+    id: "free-count-color-1", category: "free", free: true,
+    title: "Count & Color", title2: "Level 1",
+    images: ["assets/free-count-color-l1-1.jpg", "assets/free-count-color-l1-2.jpg", "assets/free-count-color-l1-3.jpg"],
+    description: "Count the pictures, write the number in the answer box, then color them in. 5 rows on every page, easy for little hands.",
+    ages: "Ages 3–5", pages: "5 rows per page", badge: "Free",
+    options: [],
+    sampleFile: "https://drive.google.com/file/d/1OCWPlJ4Kp8p1eyd7oUBRA2JCnhyoo5r3/view?usp=sharing"
+  },
+  {
+    id: "free-touch-trace", category: "free", free: true,
+    title: "Touch & Trace", title2: "Numbers 1–100",
+    images: ["assets/free-touch-trace-1.jpg", "assets/free-touch-trace-2.jpg", "assets/free-touch-trace-3.jpg"],
+    sampleArt: "assets/free-touch-trace-2.jpg",
+    description: "The fun way to count and learn! Handwriting and counting practice with playful illustrations on every page.",
+    ages: "Ages 3–5", pages: "Numbers 1–100", badge: "Free",
+    options: [],
+    sampleFile: "https://drive.google.com/file/d/1Q-EOkuG64lz1q0y_RaRYU1cdYxb-SxHf/view?usp=sharing"
+  }
+];
+
+/* =====================================================================
+   4. PREVIEW GALLERY — add real page images when you have them
+   ===================================================================== */
+const GALLERY = [
+  { title: "Patterns",            image: "", rows: ["△ ○ □ △ ○ ?", "★ ★ ♥ ★ ★ ?", "▲ ▼ ▲ ▼ ▲ ?"] },
+  { title: "Find the Difference", image: "", rows: ["🏠 🌳 ☀️ | 🏠 🌳 ☁️", "🚗 🐶 🎈 | 🚗 🐱 🎈"] },
+  { title: "Matching",            image: "", rows: ["🍎 ·····  🐘", "🐟 ·····  🍎", "🐘 ·····  🐟"] },
+  { title: "Mazes",               image: "", rows: ["🐝 ┐ ┌─┐ ┌", "  └─┘ └─┘ 🌼"] },
+  { title: "Tracing",             image: "", rows: ["〰〰〰〰", "⌒⌒⌒⌒", "/\\/\\/\\/\\"] },
+  { title: "Mandala",             image: "", rows: ["✿ ❀ ✿", "❀ ✾ ❀", "✿ ❀ ✿"] }
+];
+
+/* =====================================================================
+   Below this line you normally don't need to change anything.
+   ===================================================================== */
+const $ = (s, el = document) => el.querySelector(s);
+const $$ = (s, el = document) => Array.from(el.querySelectorAll(s));
+const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+const money = n => CONFIG.CURRENCY + Number(n).toLocaleString("en-IN");
+const isPlaceholder = v => !v || /PASTE_/i.test(v);
+const findProduct = id => PRODUCTS.find(p => p.id === id) || PRODUCTS[0];
+const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+function toast(msg, ms = 3800) {
+  const t = $("#toast");
+  t.textContent = msg;
+  t.classList.add("show");
+  clearTimeout(toast._t);
+  toast._t = setTimeout(() => t.classList.remove("show"), ms);
+}
+
+/* ---------- automatic book cover (when a product has no image) ---------- */
+function coverHTML(p, fs = 22) {
+  const c = p.cover || {};
+  const title = esc(p.title) + "<br>" + esc(p.title2 && c.ribbon !== p.title2 ? p.title2 : "");
+  return `<div class="ph-cover" style="--c:${esc(c.color || "#1360f0")};--fs:${fs}px" role="img" aria-label="${esc(p.title + " " + (p.title2 || ""))} cover">
+      <div class="ph-title">${title}</div>
+      <div class="ph-ribbon">${esc(c.ribbon || "Worksheets")}</div>
+      <div class="ph-emoji" aria-hidden="true">${esc(c.emoji || "⭐")}</div>
+      <div class="ph-brand">DigitalProducts.design</div>
+    </div>`;
+}
+function stackedCover(p, fs) {
+  return `<div class="ph-wrap"><div class="sheet l"></div><div class="sheet"></div>${coverHTML(p, fs)}</div>`;
+}
+
+/* ---------- contact details ---------- */
+function fillContactDetails() {
+  const wa = `https://wa.me/${CONFIG.WHATSAPP_NUMBER}?text=${encodeURIComponent(CONFIG.WHATSAPP_MESSAGE)}`;
+  $$("[data-whatsapp]").forEach(a => a.href = wa);
+  $$("[data-whatsapp-text]").forEach(s => s.textContent = CONFIG.WHATSAPP_DISPLAY);
+  $$("[data-email]").forEach(a => a.href = "mailto:" + CONFIG.CONTACT_EMAIL);
+  $$("[data-email-text]").forEach(s => s.textContent = CONFIG.CONTACT_EMAIL);
+  $("#year").textContent = new Date().getFullYear();
+}
+
+/* =====================================================================
+   HERO SLIDESHOW
+   ===================================================================== */
+function initSlider() {
+  const slides = $$(".slide");
+  const dotsBox = $(".slider-dots");
+  const hero = $(".hero");
+  let i = 0, timer = null;
+
+  // fill the placeholder book covers on slides 2–4
+  $$(".art-stage[data-cover]").forEach(stage => {
+    $(".book", stage).innerHTML = coverHTML(findProduct(stage.dataset.cover), 24);
+  });
+
+  slides.forEach((_, n) => {
+    const b = document.createElement("button");
+    b.type = "button";
+    b.setAttribute("role", "tab");
+    b.setAttribute("aria-label", "Slide " + (n + 1));
+    b.setAttribute("aria-selected", n === 0 ? "true" : "false");
+    b.addEventListener("click", () => { go(n); restart(); });
+    dotsBox.appendChild(b);
+  });
+  const dots = $$("button", dotsBox);
+
+  function go(n) {
+    slides[i].classList.remove("is-active");
+    dots[i].setAttribute("aria-selected", "false");
+    i = (n + slides.length) % slides.length;
+    slides[i].classList.add("is-active");
+    dots[i].setAttribute("aria-selected", "true");
+  }
+  const next = () => go(i + 1);
+  const prev = () => go(i - 1);
+  function start() { if (!reduceMotion && !timer) timer = setInterval(next, 6000); }
+  function stop() { clearInterval(timer); timer = null; }
+  function restart() { stop(); start(); }
+
+  $(".slider-arrow.next").addEventListener("click", () => { next(); restart(); });
+  $(".slider-arrow.prev").addEventListener("click", () => { prev(); restart(); });
+  hero.addEventListener("mouseenter", stop);
+  hero.addEventListener("mouseleave", start);
+  hero.addEventListener("focusin", stop);
+  hero.addEventListener("focusout", start);
+  document.addEventListener("visibilitychange", () => document.hidden ? stop() : start());
+
+  // swipe on phones
+  let x0 = null, y0 = null;
+  hero.addEventListener("touchstart", e => { x0 = e.touches[0].clientX; y0 = e.touches[0].clientY; stop(); }, { passive: true });
+  hero.addEventListener("touchend", e => {
+    if (x0 === null) return;
+    const dx = e.changedTouches[0].clientX - x0, dy = e.changedTouches[0].clientY - y0;
+    if (Math.abs(dx) > 45 && Math.abs(dx) > Math.abs(dy)) dx < 0 ? next() : prev();
+    x0 = null; start();
+  });
+  start();
+}
+
+/* =====================================================================
+   SHOP: categories, search, product cards
+   ===================================================================== */
+const shop = { cat: "all", q: "" };
+
+
+/* ---------- 3-scene product pictures (play on hover) ---------- */
+const SCENE_ROWS = {
+  "🧠": ["△ ○ □ △ ?", "🍎 · · · 🍎", "1 2 3 _ 5"], "🌸": ["✿ ❀ ✿", "❀ ✾ ❀", "✿ ❀ ✿"],
+  "💗": ["😊 😢 😠", "Breathe in… 1 2 3", "I feel ____"], "✏️": ["c _ t", "d o _", "s _ n"],
+  "🐝": ["🐝 ┐ ┌─┐", "  └─┘ └ 🌼"], "➕": ["3 + 4 = _", "12 + 5 = _", "23 + 9 = _"],
+  "💰": ["Chapter 1", "Idea → Product", "₹ ₹ ₹"],
+  "🖍️": ["〰〰〰〰", "⌒⌒⌒⌒", "/\\/\\/\\/\\"], "🔤": ["b · a · t", "c _ t", "sh  ch  th"]
+};
+function autoScene(p, n) {
+  const c = p.cover || {};
+  if (n === 0) return stackedCover(p, 20);
+  if (n === 1) {
+    const rows = SCENE_ROWS[c.emoji] || ["△ ○ □ △", "★ ★ ♥ ★", "▲ ▼ ▲ ▼"];
+    return `<div class="scene-page"><div class="sp-top" style="--c:${esc(c.color || "#1360f0")}">${esc(c.emoji || "⭐")} Sample page</div>
+      ${rows.map(r => `<div class="sp-row">${esc(r)}</div>`).join("")}<div class="sp-foot">DigitalProducts.design</div></div>`;
+  }
+  return `<div class="scene-inside" style="--c:${esc(c.color || "#1360f0")}">
+      <div class="si-stack"><span></span><span></span><span></span></div>
+      <strong>${esc(p.pages)}</strong><em>Printable PDF · Instant download</em></div>`;
+}
+function scenesHTML(p) {
+  const imgs = (p.images || []).slice(0, 3);
+  const alt = esc(p.title + " " + (p.title2 || ""));
+  const names = ["cover", "sample page", "inside"];
+  let out = "";
+  for (let n = 0; n < 3; n++) {
+    const inner = imgs[n]
+      ? `<img src="${esc(imgs[n])}" alt="${alt} – ${names[n]}" loading="lazy">`
+      : autoScene(p, n);
+    out += `<div class="scene${n === 0 ? " on" : ""}" ${n ? 'aria-hidden="true"' : ""}>${inner}</div>`;
+  }
+  return `<div class="scenes" data-scenes>${out}</div>
+    <div class="scene-dots" aria-hidden="true"><i class="on"></i><i></i><i></i></div>`;
+}
+function playScenes(media, on) {
+  const scenes = $$(".scene", media), dots = $$(".scene-dots i", media);
+  if (scenes.length < 2) return;
+  const show = k => {
+    scenes.forEach((s, j) => s.classList.toggle("on", j === k));
+    dots.forEach((d, j) => d.classList.toggle("on", j === k));
+    media._k = k;
+  };
+  clearInterval(media._t); media._t = null;
+  if (on) {
+    show(((media._k || 0) + 1) % scenes.length);
+    media._t = setInterval(() => show((media._k + 1) % scenes.length), 1100);
+  } else show(0);
+}
+function initScenes() {
+  const list = $("#productList");
+  // desktop: play while the mouse is over the picture
+  list.addEventListener("mouseover", e => {
+    const m = e.target.closest(".card-media");
+    if (m && !m._t && !(e.relatedTarget && m.contains(e.relatedTarget))) playScenes(m, true);
+  });
+  list.addEventListener("mouseout", e => {
+    const m = e.target.closest(".card-media");
+    if (m && !(e.relatedTarget && m.contains(e.relatedTarget))) playScenes(m, false);
+  });
+  // phones (no mouse): play while the card is on screen
+  if (window.matchMedia("(hover: none)").matches && !reduceMotion && "IntersectionObserver" in window) {
+    const io = new IntersectionObserver(es => es.forEach(en => playScenes(en.target, en.isIntersecting)), { threshold: 0.6 });
+    new MutationObserver(() => $$(".card-media", list).forEach(m => io.observe(m))).observe(list, { childList: true });
+    $$(".card-media", list).forEach(m => io.observe(m));
+  }
+}
+
+function renderCategories() {
+  $("#catList").innerHTML = CATEGORIES.map(c => {
+    const n = c.id === "all" ? PRODUCTS.length : PRODUCTS.filter(p => p.category === c.id).length;
+    return `<li><button class="cat-btn" type="button" data-cat="${c.id}" aria-pressed="${c.id === shop.cat}">
+        <span class="c-ico" aria-hidden="true">${c.icon}</span>${esc(c.name)}<span class="count">${n}</span></button></li>`;
+  }).join("");
+}
+
+function productCard(p, index) {
+  if (p.free) return freeCard(p, index);
+  const prices = p.options.map(o => o.price);
+  const low = Math.min(...prices);
+  const save = p.oldPrice > low ? Math.round((p.oldPrice - low) / p.oldPrice * 100) : 0;
+  const media = scenesHTML(p);
+  const badge = p.badge ? `<span class="badge ${/new/i.test(p.badge) ? "new" : ""}">${esc(p.badge)}</span>` : "";
+  const colors = ["btn-blue", "btn-green"];
+  const buys = p.options.map((o, k) => `
+      <button class="btn ${colors[k % 2]}" type="button" data-buy="${esc(p.id)}" data-opt="${k}">
+        <svg class="icon"><use href="#i-file"/></svg>
+        <span>Buy ${esc(o.label)}<small>${money(o.price)}</small></span>
+      </button>`).join("");
+  return `
+  <article class="card ${p.bundle ? "bundle" : ""}" style="animation-delay:${Math.min(index, 6) * 60}ms">
+    <div class="card-media">${badge}${p.bundle && save ? `<span class="ribbon">Save ${save}%</span>` : ""}${media}</div>
+    <div class="card-body">
+      <span class="chip">Digital product</span>
+      <h3 class="card-title">${esc(p.title)}<span>${esc(p.title2)}</span></h3>
+      <p class="card-desc">${esc(p.description)}</p>
+      <div class="tags"><span class="tag">${esc(p.ages)}</span><span class="tag">${esc(p.pages)}</span><span class="tag">Printable PDF</span></div>
+      <div class="price">
+        ${new Set(prices).size > 1 ? `<span class="from">from</span>` : ""}
+        <span class="now">${money(low)}</span>
+        ${p.oldPrice > low ? `<span class="was">${money(p.oldPrice)}</span><span class="save">Save ${save}%</span>` : ""}
+      </div>
+      <div class="card-actions">
+        ${buys}
+        ${p.sample === false ? "" : `<button class="btn btn-orange" type="button" data-sample="${esc(p.id)}">
+          <svg class="icon"><use href="#i-download"/></svg>
+          <span>Free Sample<small>Download</small></span>
+        </button>`}
+      </div>
+    </div>
+  </article>`;
+}
+
+function freeCard(p, index) {
+  return `
+  <article class="card free-card" style="animation-delay:${Math.min(index, 6) * 60}ms">
+    <div class="card-media"><span class="badge new">${esc(p.badge || "Free")}</span>${scenesHTML(p)}</div>
+    <div class="card-body">
+      <span class="chip">Free download</span>
+      <h3 class="card-title">${esc(p.title)}<span>${esc(p.title2)}</span></h3>
+      <p class="card-desc">${esc(p.description)}</p>
+      <div class="tags"><span class="tag">${esc(p.ages)}</span><span class="tag">${esc(p.pages)}</span><span class="tag">Printable PDF</span></div>
+      <div class="price"><span class="now free-now">FREE</span></div>
+      <div class="card-actions">
+        <button class="btn btn-green" type="button" data-sample="${esc(p.id)}">
+          <svg class="icon"><use href="#i-download"/></svg>
+          <span>Download now<small>Free PDF</small></span>
+        </button>
+      </div>
+    </div>
+  </article>`;
+}
+
+function renderProducts() {
+  const cat = CATEGORIES.find(c => c.id === shop.cat) || CATEGORIES[0];
+  const q = shop.q.trim().toLowerCase();
+  let list = PRODUCTS.filter(p => shop.cat === "all" || p.category === shop.cat);
+  if (q) list = list.filter(p => (p.title + " " + p.title2 + " " + p.description).toLowerCase().includes(q));
+
+  $("#shopTitle").textContent = q ? `Results for “${shop.q.trim()}”` : cat.heading;
+  $("#shopCount").textContent = list.length === 1 ? "1 product" : `${list.length} products`;
+
+  $("#productList").innerHTML = list.length
+    ? list.map(productCard).join("")
+    : `<div class="empty">
+         <div class="e-ico" aria-hidden="true">${q ? "🔍" : cat.icon}</div>
+         <h3>${q ? "No worksheets match your search" : "New " + esc(cat.name.toLowerCase()) + " coming soon"}</h3>
+         <p>${q ? "Try a shorter word, or browse all products." : "Browse the other categories, or ask us on WhatsApp what’s next."}</p>
+         <button class="btn btn-blue" type="button" data-shop="all">See all products</button>
+       </div>`;
+}
+
+function setCategory(id, scroll) {
+  shop.cat = CATEGORIES.some(c => c.id === id) ? id : "all";
+  shop.q = "";
+  $("#searchInput").value = "";
+  $$(".cat-btn").forEach(b => b.setAttribute("aria-pressed", String(b.dataset.cat === shop.cat)));
+  renderProducts();
+  const active = $(`.cat-btn[data-cat="${shop.cat}"]`);
+  if (active && window.innerWidth <= 980) active.scrollIntoView({ inline: "center", block: "nearest", behavior: reduceMotion ? "auto" : "smooth" });
+  if (scroll) $("#products").scrollIntoView({ behavior: reduceMotion ? "auto" : "smooth" });
+}
+
+function buy(productId, optIndex) {
+  const p = findProduct(productId);
+  const opt = p.options[optIndex] || p.options[0];
+  if (isPlaceholder(opt.link)) {
+    toast("Payment link not added yet. Paste the SuperProfile link for this product in the PRODUCTS list.");
+    return;
+  }
+  window.open(opt.link, "_blank", "noopener");
+}
+
+/* =====================================================================
+   GALLERY + LIGHTBOX
+   ===================================================================== */
+function worksheetHTML(g) {
+  return `<div class="ws"><div class="ws-h">${esc(g.title)}</div>${g.rows.map(r => `<div class="ws-row">${esc(r)}</div>`).join("")}</div>`;
+}
+function renderGallery() {
+  $("#gallery").innerHTML = GALLERY.map((g, k) => `
+    <button class="g-item" type="button" data-lightbox="${k}" aria-label="Preview ${esc(g.title)} page">
+      <div class="g-thumb">${g.image ? `<img src="${esc(g.image)}" alt="" loading="lazy">` : worksheetHTML(g)}</div>
+      <span class="g-cap">${esc(g.title)}</span>
+    </button>`).join("");
+}
+let lbIndex = 0;
+function showLightbox(k) {
+  lbIndex = (k + GALLERY.length) % GALLERY.length;
+  const g = GALLERY[lbIndex];
+  $("#lbMedia").innerHTML = g.image ? `<img src="${esc(g.image)}" alt="${esc(g.title)} worksheet page">` : worksheetHTML(g);
+  $("#lbTitle").textContent = g.title;
+}
+
+/* =====================================================================
+   MODALS (open / close / keyboard)
+   ===================================================================== */
+let lastFocus = null;
+function openModal(id) {
+  const m = document.getElementById(id);
+  lastFocus = document.activeElement;
+  m.classList.add("open");
+  m.setAttribute("aria-hidden", "false");
+  document.body.style.overflow = "hidden";
+  setTimeout(() => {
+    const f = $(".modal-box input:not([hidden]):not(.hp), .modal-box .modal-close", m);
+    if (f && !(id === "sampleModal" && window.innerWidth < 600)) f.focus();
+    else $(".modal-close", m).focus();
+  }, 60);
+}
+function closeModal(m) {
+  if (!m) return;
+  m.classList.remove("open");
+  m.setAttribute("aria-hidden", "true");
+  if (!$(".modal.open")) document.body.style.overflow = "";
+  if (lastFocus && document.contains(lastFocus)) lastFocus.focus();
+}
+document.addEventListener("keydown", e => {
+  const open = $$(".modal.open").pop();
+  if (!open) return;
+  if (e.key === "Escape") { if (!$(".iti__country-list:not(.iti__hide)")) closeModal(open); }
+  if (e.key === "Tab") {
+    const items = $$("button, a[href], input:not(.hp), textarea, select, [tabindex]:not([tabindex='-1'])", open)
+      .filter(el => el.offsetParent !== null && !el.disabled);
+    if (!items.length) return;
+    const first = items[0], last = items[items.length - 1];
+    if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+    else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+  }
+  if (open.id === "lightbox" && e.key === "ArrowRight") showLightbox(lbIndex + 1);
+  if (open.id === "lightbox" && e.key === "ArrowLeft") showLightbox(lbIndex - 1);
+});
+
+function openPolicy(key) {
+  const tpl = document.getElementById("policy-" + key);
+  if (!tpl) return;
+  $("#policyContent").innerHTML = "";
+  $("#policyContent").appendChild(tpl.content.cloneNode(true));
+  fillContactDetails();
+  openModal("policyModal");
+  $("#policyModal .modal-box").scrollTop = 0;
+}
+
+/* =====================================================================
+   FREE SAMPLE POPUP
+   ===================================================================== */
+const sample = { product: null, mode: "email", iti: null, busy: false };
+const ALLOWED_EMAIL = /^[a-z0-9](?:[a-z0-9._%+-]{0,62}[a-z0-9])?@(gmail\.com|googlemail\.com|ymail\.com|rocketmail\.com|yahoo\.(?:com|in|co\.in|co\.uk|ca|com\.au|fr|de|com\.sg|com\.my|com\.ph))$/i;
+
+function initPhoneField() {
+  if (!window.intlTelInput) return;   // library didn't load: simple check is used instead
+  sample.iti = window.intlTelInput($("#samplePhone"), {
+    initialCountry: "auto",
+    geoIpLookup: cb => {
+      fetch("https://ipapi.co/json/").then(r => r.json())
+        .then(d => cb((d && d.country_code) || CONFIG.DEFAULT_COUNTRY))
+        .catch(() => cb(CONFIG.DEFAULT_COUNTRY));
+    },
+    preferredCountries: ["in", "us", "gb", "ae", "ca", "au", "sg"],
+    separateDialCode: true,
+    dropdownContainer: document.body,
+    utilsScript: "https://cdn.jsdelivr.net/npm/intl-tel-input@18.2.1/build/js/utils.js"
+  });
+}
+
+function setSampleMode(mode) {
+  sample.mode = mode;
+  $$(".tab").forEach(t => t.setAttribute("aria-selected", String(t.dataset.mode === mode)));
+  $("#panelEmail").hidden = mode !== "email";
+  $("#panelMobile").hidden = mode !== "mobile";
+  clearSampleError();
+  $("#sampleSubmitText").textContent = mode === "email" ? "Send Sample Worksheet" : "Download Sample Worksheet";
+  (mode === "email" ? $("#sampleEmail") : $("#samplePhone")).focus();
+}
+
+function openSample(productId) {
+  const p = findProduct(productId);
+  sample.product = p;
+  const art = p.sampleArt || (p.images || [])[0];
+  $("#sampleArt").innerHTML = art
+    ? `<img src="${esc(art)}" alt="${esc(p.title + " " + p.title2)} cover with sample worksheets">`
+    : stackedCover(p, 22);
+  $("#sampleProduct").textContent = p.sampleName || `${p.title} ${p.title2}`.replace(/\s+/g, " ");
+  $("#sampleLeadStart").textContent = p.free
+    ? "Enter your email or mobile number to download your free book: "
+    : "Enter your email or mobile number to get a free sample worksheet from our ";
+  $("#sampleForm").hidden = false;
+  $(".sample-box").classList.remove("done");
+  $("#sampleSuccess").classList.remove("show");
+  $("#successDownload").hidden = true;
+  clearSampleError();
+  openModal("sampleModal");
+}
+
+function showSampleError(msg, field) {
+  const box = $("#sampleError");
+  $("span", box).textContent = msg;
+  box.hidden = false;
+  $("#sampleHint").hidden = true;
+  if (field) { field.classList.add("invalid"); field.setAttribute("aria-invalid", "true"); field.focus(); }
+}
+function clearSampleError() {
+  $("#sampleError").hidden = true;
+  $("#sampleHint").hidden = false;
+  $$("#sampleForm .field").forEach(f => { f.classList.remove("invalid"); f.removeAttribute("aria-invalid"); });
+}
+
+// returns { ok, value, country, error }
+function checkEmail() {
+  const v = $("#sampleEmail").value.trim().toLowerCase();
+  if (!v) return { ok: false, error: "Enter your Gmail or Yahoo email address." };
+  if (!ALLOWED_EMAIL.test(v)) return { ok: false, error: "Please use a Gmail or Yahoo address, like yourname@gmail.com." };
+  if (/@(gmail|googlemail)\.com$/.test(v)) {
+    const name = v.split("@")[0].split("+")[0].replace(/\./g, "");
+    if (name.length < 6 || name.length > 30) return { ok: false, error: "This Gmail address doesn’t look right. Gmail names are 6 to 30 characters." };
+  }
+  return { ok: true, value: v, country: "" };
+}
+function checkPhone() {
+  const raw = $("#samplePhone").value.trim();
+  if (!raw) return { ok: false, error: "Enter your mobile number." };
+  const iti = sample.iti;
+  if (iti && window.intlTelInputUtils) {
+    if (!iti.isValidNumber()) return { ok: false, error: "This number doesn’t look right for the selected country. Check the digits and the country code." };
+    const t = iti.getNumberType(), T = window.intlTelInputUtils.numberType;
+    if (T && t !== T.MOBILE && t !== T.FIXED_LINE_OR_MOBILE) return { ok: false, error: "Please enter a mobile number, not a landline." };
+    return { ok: true, value: iti.getNumber(), country: iti.getSelectedCountryData().name || "" };
+  }
+  // fallback when the phone library couldn't load
+  const num = iti ? iti.getNumber() : raw.replace(/[\s()-]/g, "");
+  if (!/^\+[1-9]\d{7,14}$/.test(num)) return { ok: false, error: "Enter your number with country code, like +91 98765 43210." };
+  return { ok: true, value: num, country: iti ? (iti.getSelectedCountryData().name || "") : "" };
+}
+
+// Google Drive share link -> direct-download link (used for mobile downloads)
+function driveId(url) { const m = String(url).match(/drive\.google\.com\/(?:file\/d\/|open\?id=|uc\?.*id=)([\w-]+)/); return m ? m[1] : ""; }
+function downloadUrl(url) { const id = driveId(url); return id ? `https://drive.google.com/uc?export=download&id=${id}` : url; }
+
+async function sendLead(data) {
+  if (isPlaceholder(CONFIG.SCRIPT_URL)) {
+    console.warn("[Demo mode] Lead NOT saved. Paste your Google Script URL in CONFIG.SCRIPT_URL.", data);
+    await new Promise(r => setTimeout(r, 900));
+    return { ok: true, demo: true };
+  }
+  // text/plain body = no CORS preflight, which Google Apps Script needs
+  const res = await fetch(CONFIG.SCRIPT_URL, { method: "POST", body: JSON.stringify(data) });
+  try { return await res.json(); } catch { return { ok: res.ok }; }
+}
+
+function startDownload(url) {
+  const a = document.createElement("a");
+  a.href = url; a.download = ""; a.target = "_blank"; a.rel = "noopener";
+  document.body.appendChild(a); a.click(); a.remove();
+}
+
+async function submitSample(e) {
+  e.preventDefault();
+  if (sample.busy) return;
+  clearSampleError();
+  const p = sample.product || PRODUCTS[0];
+  const field = sample.mode === "email" ? $("#sampleEmail") : $("#samplePhone");
+  const check = sample.mode === "email" ? checkEmail() : checkPhone();
+  if (!check.ok) { showSampleError(check.error, field); return; }
+
+  const sampleUrl = new URL(p.sampleFile, location.href).href;
+  const directUrl = downloadUrl(sampleUrl);
+  const payload = {
+    type: sample.mode,
+    contact: check.value,
+    country: check.country,
+    product: `${p.title} ${p.title2}`.replace(/\s+/g, " "),
+    productId: p.id,
+    sampleLink: sampleUrl,
+    consent: $("#sampleConsent").checked ? "Yes" : "No",
+    pageUrl: location.href,
+    website: $("#sampleHp").value   // spam trap
+  };
+
+  const btn = $("#sampleSubmit");
+  sample.busy = true; btn.disabled = true; btn.classList.add("loading");
+  try {
+    if (payload.website) { await new Promise(r => setTimeout(r, 600)); throw new Error("spam"); }
+    const res = await sendLead(payload);
+    if (!res || res.ok === false) throw new Error((res && res.error) || "save failed");
+
+    $("#sampleForm").hidden = true;
+    $(".sample-box").classList.add("done");
+    $("#sampleSuccess").classList.add("show");
+    if (sample.mode === "email") {
+      $("#successText").innerHTML = `We’ve sent the sample to <strong>${esc(check.value)}</strong>. Check your inbox, and the Promotions or Spam folder if you don’t see it in a few minutes.`;
+    } else {
+      $("#successText").textContent = "Your download has started. If it didn’t, tap the button below.";
+      $("#successDownload").href = directUrl;
+      $("#successDownload").hidden = false;
+      startDownload(directUrl);
+    }
+    if (res.demo) toast("Demo mode: nothing was saved. Add your Google Script URL in CONFIG.");
+    $("#sampleEmail").value = ""; $("#samplePhone").value = "";
+  } catch (err) {
+    if (err.message === "spam") return;
+    const msg = /gmail|yahoo|mobile|number|country/i.test(err.message) ? err.message
+      : "We couldn’t send your sample right now. Check your internet connection and try again.";
+    showSampleError(msg, null);
+  } finally {
+    sample.busy = false; btn.disabled = false; btn.classList.remove("loading");
+  }
+}
+
+/* =====================================================================
+   CONTACT FORM (opens the visitor's email app)
+   ===================================================================== */
+function submitContact(e) {
+  e.preventDefault();
+  const f = e.target;
+  const bad = $$(".field", f).filter(x => !x.value.trim());
+  $$(".field", f).forEach(x => x.classList.toggle("invalid", bad.includes(x)));
+  if (bad.length) { bad[0].focus(); toast("Please fill in all three fields."); return; }
+  const body = `Name: ${f.name.value}\nReach me at: ${f.reach.value}\n\n${f.message.value}`;
+  location.href = `mailto:${CONFIG.CONTACT_EMAIL}?subject=${encodeURIComponent("Question from DigitalProducts.design")}&body=${encodeURIComponent(body)}`;
+}
+
+/* =====================================================================
+   NAVIGATION + CLICK HANDLING
+   ===================================================================== */
+function setMenu(open) {
+  const nav = $("#mobileNav");
+  nav.classList.toggle("open", open);
+  nav.setAttribute("aria-hidden", String(!open));
+  $(".menu-btn").setAttribute("aria-expanded", String(open));
+  document.body.style.overflow = open ? "hidden" : "";
+}
+
+document.addEventListener("click", e => {
+  const t = e.target.closest("[data-action],[data-cat],[data-shop],[data-sample],[data-buy],[data-policy],[data-lightbox],[data-close],.tab");
+  if (!t) return;
+  if (t.matches(".tab")) return setSampleMode(t.dataset.mode);
+  if (t.hasAttribute("data-close")) return closeModal(t.closest(".modal"));
+  if (t.dataset.cat) return setCategory(t.dataset.cat, false);
+  if (t.dataset.shop) { e.preventDefault(); setMenu(false); return setCategory(t.dataset.shop, true); }
+  if (t.dataset.sample) return openSample(t.dataset.sample);
+  if (t.dataset.buy) return buy(t.dataset.buy, Number(t.dataset.opt));
+  if (t.dataset.policy) return openPolicy(t.dataset.policy);
+  if (t.dataset.lightbox) { showLightbox(Number(t.dataset.lightbox)); return openModal("lightbox"); }
+  const a = t.dataset.action;
+  if (a === "open-menu") setMenu(true);
+  if (a === "close-menu") setMenu(false);
+  if (a === "focus-search") {
+    $("#products").scrollIntoView({ behavior: reduceMotion ? "auto" : "smooth" });
+    setTimeout(() => $("#searchInput").focus({ preventScroll: true }), 450);
+  }
+});
+
+function initActiveNav() {
+  const links = $$(".main-nav a:not([data-shop])");
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(en => {
+      if (!en.isIntersecting) return;
+      links.forEach(l => l.classList.toggle("active", l.getAttribute("href") === "#" + en.target.id));
+    });
+  }, { rootMargin: "-45% 0px -50% 0px" });
+  ["products", "how", "faq", "contact"].forEach(id => { const s = document.getElementById(id); if (s) io.observe(s); });
+}
+
+/* =====================================================================
+   START
+   ===================================================================== */
+fillContactDetails();
+initSlider();
+renderCategories();
+renderProducts();
+initScenes();
+initPhoneField();
+initActiveNav();
+$("#searchInput").addEventListener("input", e => { shop.q = e.target.value; renderProducts(); });
+$("#sampleForm").addEventListener("submit", submitSample);
+$("#sampleEmail").addEventListener("input", clearSampleError);
+$("#samplePhone").addEventListener("input", clearSampleError);
+$("#contactForm").addEventListener("submit", submitContact);
+$("#lbPrev").addEventListener("click", () => showLightbox(lbIndex - 1));
+$("#lbNext").addEventListener("click", () => showLightbox(lbIndex + 1));
+</script>
+</body>
+</html>
